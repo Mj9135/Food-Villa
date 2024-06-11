@@ -27521,13 +27521,16 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _config = require("../constants/config");
+var _shimmer = require("./shimmer");
+var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
 var _s = $RefreshSig$();
-const RestaurentCard = ({ name, areaName, cloudinaryImageId, avgRating })=>{
+const RestaurantCard = ({ name, areaName, cloudinaryImageId, avgRating })=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "Card",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                src: (0, _config.imgUrl) + cloudinaryImageId
+                src: (0, _config.imgUrl) + cloudinaryImageId,
+                alt: name
             }, void 0, false, {
                 fileName: "src/components/body.js",
                 lineNumber: 11,
@@ -27564,25 +27567,31 @@ const RestaurentCard = ({ name, areaName, cloudinaryImageId, avgRating })=>{
         columnNumber: 10
     }, undefined);
 };
-_c = RestaurentCard;
-function filterData(searchText, restaurents) {
-    const data = restaurents.filter((restaurent)=>restaurent.data.name.toLowerCase().includes(searchText.toLowerCase()));
+_c = RestaurantCard;
+function filterData(searchText, restaurants) {
+    const data = restaurants.filter((restaurant)=>restaurant.info.name.toLowerCase().includes(searchText.toLowerCase()));
     return data;
 }
 const Body = ()=>{
     _s();
     const [searchText, setSearchText] = (0, _react.useState)("");
-    const [restaurents, setRestaurents] = (0, _react.useState)((0, _config.restaurentList));
+    const [restaurants, setRestaurants] = (0, _react.useState)([]);
+    const [filteredRestaurants, setFilteredRestaurants] = (0, _react.useState)([]);
     (0, _react.useEffect)(()=>{
-        getRestaurent();
+        getRestaurants();
     }, []);
-    async function getRestaurent() {
+    async function getRestaurants() {
         const data = await fetch("https://www.swiggy.com/mapi/homepage/getCards?lat=22.8045665&lng=86.2028754");
         const json = await data.json();
-        setRestaurents(json?.data?.success?.cards[3]?.gridWidget?.gridElements?.infoWithStyle?.restaurants);
-        console.log(json);
+        const fetchedRestaurants = json?.data?.success?.cards[4]?.gridWidget?.gridElements?.infoWithStyle?.restaurants || [];
+        setRestaurants(fetchedRestaurants);
+        setFilteredRestaurants(fetchedRestaurants); // Initialize filteredRestaurants with fetched restaurants
     }
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+    return restaurants.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
+        fileName: "src/components/body.js",
+        lineNumber: 35,
+        columnNumber: 37
+    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "search-container",
@@ -27596,54 +27605,52 @@ const Body = ()=>{
                         }
                     }, void 0, false, {
                         fileName: "src/components/body.js",
-                        lineNumber: 35,
+                        lineNumber: 37,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                         onClick: ()=>{
-                            const data = filterData(searchText, restaurents);
-                            setRestaurents(data);
+                            const data = filterData(searchText, restaurants);
+                            setFilteredRestaurants(data);
                         },
                         className: "search-btn",
                         children: "Submit"
                     }, void 0, false, {
                         fileName: "src/components/body.js",
-                        lineNumber: 38,
+                        lineNumber: 40,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/body.js",
-                lineNumber: 34,
+                lineNumber: 36,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "list",
-                children: restaurents.map((restaurent)=>{
-                    return /*#__PURE__*/ (0, _react.createElement)(RestaurentCard, {
-                        ...restaurent?.info,
-                        key: restaurent?.info?.id,
+                children: filteredRestaurants.map((restaurant)=>/*#__PURE__*/ (0, _react.createElement)(RestaurantCard, {
+                        ...restaurant?.info,
+                        key: restaurant?.info?.id,
                         __source: {
                             fileName: "src/components/body.js",
-                            lineNumber: 47,
-                            columnNumber: 16
+                            lineNumber: 48,
+                            columnNumber: 48
                         },
                         __self: undefined
-                    });
-                })
+                    }))
             }, void 0, false, {
                 fileName: "src/components/body.js",
-                lineNumber: 45,
+                lineNumber: 47,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true);
 };
-_s(Body, "5A8T2l+jwsoDERkF3xn2bNSsORg=");
+_s(Body, "nXg0OrEDMM5I+mSWSAYRVREPmL0=");
 _c1 = Body;
 exports.default = Body;
 var _c, _c1;
-$RefreshReg$(_c, "RestaurentCard");
+$RefreshReg$(_c, "RestaurantCard");
 $RefreshReg$(_c1, "Body");
 
   $parcel$ReactRefreshHelpers$3ad2.postlude(module);
@@ -27651,15 +27658,15 @@ $RefreshReg$(_c1, "Body");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../constants/config":"gXIQ8"}],"gXIQ8":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../constants/config":"gXIQ8","./shimmer":"fWXGy"}],"gXIQ8":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "restaurentList", ()=>restaurentList);
 parcelHelpers.export(exports, "imgUrl", ()=>imgUrl);
 const restaurentList = [
     {
-        type: "restaurant",
-        data: {
+        type: "restaurants",
+        info: {
             type: "F",
             id: "74453",
             name: "Domino's Pizza",
@@ -27779,8 +27786,8 @@ const restaurentList = [
         subtype: "basic"
     },
     {
-        type: "restaurant",
-        data: {
+        type: "restaurants",
+        info: {
             type: "F",
             id: "410476",
             name: "The Brooklyn Creamery",
@@ -27902,8 +27909,8 @@ const restaurentList = [
         subtype: "basic"
     },
     {
-        type: "restaurant",
-        data: {
+        type: "restaurants",
+        info: {
             type: "F",
             id: "81094",
             name: "Richie Rich Juices & Shakes",
@@ -28023,8 +28030,8 @@ const restaurentList = [
         subtype: "basic"
     },
     {
-        type: "restaurant",
-        data: {
+        type: "restaurants",
+        info: {
             type: "F",
             id: "311443",
             name: "Siddhi Icecream & Thick Shake",
@@ -28147,8 +28154,8 @@ const restaurentList = [
         subtype: "basic"
     },
     {
-        type: "restaurant",
-        data: {
+        type: "restaurants",
+        info: {
             type: "F",
             id: "307070",
             name: "Pizza Pie",
@@ -28268,8 +28275,8 @@ const restaurentList = [
         subtype: "basic"
     },
     {
-        type: "restaurant",
-        data: {
+        type: "restaurants",
+        info: {
             type: "F",
             id: "76858",
             name: "Feeling Hungry",
@@ -28391,8 +28398,8 @@ const restaurentList = [
         subtype: "basic"
     },
     {
-        type: "restaurant",
-        data: {
+        type: "restaurants",
+        info: {
             type: "F",
             id: "617279",
             name: "Malaxmi Fast Food",
@@ -28515,8 +28522,8 @@ const restaurentList = [
         subtype: "basic"
     },
     {
-        type: "restaurant",
-        data: {
+        type: "restaurants",
+        info: {
             type: "F",
             id: "469264",
             name: "Dessert House",
@@ -28637,8 +28644,8 @@ const restaurentList = [
         subtype: "basic"
     },
     {
-        type: "restaurant",
-        data: {
+        type: "restaurants",
+        info: {
             type: "F",
             id: "395204",
             name: "McDonald's Gourmet Burger Collection",
@@ -28761,8 +28768,8 @@ const restaurentList = [
         subtype: "basic"
     },
     {
-        type: "restaurant",
-        data: {
+        type: "restaurants",
+        info: {
             type: "F",
             id: "193541",
             name: "Behrouz Biryani",
@@ -28884,8 +28891,8 @@ const restaurentList = [
         subtype: "basic"
     },
     {
-        type: "restaurant",
-        data: {
+        type: "restaurants",
+        info: {
             type: "F",
             id: "475510",
             name: "Momos House",
@@ -29005,8 +29012,8 @@ const restaurentList = [
         subtype: "basic"
     },
     {
-        type: "restaurant",
-        data: {
+        type: "restaurants",
+        info: {
             type: "F",
             id: "127596",
             name: "Sabir Chicken",
@@ -29127,8 +29134,8 @@ const restaurentList = [
         subtype: "basic"
     },
     {
-        type: "restaurant",
-        data: {
+        type: "restaurants",
+        info: {
             type: "F",
             id: "64656",
             name: "Mahesh Pav Bhaji",
@@ -29252,8 +29259,8 @@ const restaurentList = [
         subtype: "basic"
     },
     {
-        type: "restaurant",
-        data: {
+        type: "restaurants",
+        info: {
             type: "F",
             id: "255204",
             name: "The Dango Cake Shop",
@@ -29373,8 +29380,8 @@ const restaurentList = [
         subtype: "basic"
     },
     {
-        type: "restaurant",
-        data: {
+        type: "restaurants",
+        info: {
             type: "F",
             id: "664656",
             name: "Cheezylicious Cafe",
@@ -29501,7 +29508,36 @@ const restaurentList = [
 ];
 const imgUrl = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/";
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bjsug":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fWXGy":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$79c2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$79c2.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Shimmer = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+        children: "shimmer ui loading....."
+    }, void 0, false, {
+        fileName: "src/components/shimmer.js",
+        lineNumber: 2,
+        columnNumber: 10
+    }, undefined);
+};
+_c = Shimmer;
+exports.default = Shimmer;
+var _c;
+$RefreshReg$(_c, "Shimmer");
+
+  $parcel$ReactRefreshHelpers$79c2.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"bjsug":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$f161 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;

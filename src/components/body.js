@@ -1,43 +1,49 @@
 import { useEffect, useState } from "react";
-import { restaurentList } from "../constants/config";
-import { imgUrl } from "../constants/config";
+import { restaurantList, imgUrl } from "../constants/config";
+import Shimmer from "./shimmer";
 
-const RestaurentCard = ({ name, areaName, cloudinaryImageId, avgRating }) => {
+const RestaurantCard = ({ name, areaName, cloudinaryImageId, avgRating }) => {
   return (
     <div className="Card">
-      <img src={imgUrl + cloudinaryImageId} />
+      <img src={imgUrl + cloudinaryImageId} alt={name} />
       <h2>{name}</h2>
       <h3>{areaName}</h3>
       <h4>{avgRating} star</h4>
     </div>
   );
 };
-function filterData(searchText, restaurents) {
-  const data = restaurents.filter((restaurent) =>
-    restaurent.data.name.toLowerCase().includes(searchText.toLowerCase())
+
+function filterData(searchText, restaurants) {
+  const data = restaurants.filter((restaurant) =>
+    restaurant.info.name.toLowerCase().includes(searchText.toLowerCase())
   );
   return data;
 }
 
 const Body = () => {
   const [searchText, setSearchText] = useState("");
-  const [restaurents, setRestaurents] = useState(restaurentList);
+  const [restaurants, setRestaurants] = useState([]);
+  const [filteredRestaurants, setFilteredRestaurants] = useState([]);
+
   useEffect(() => {
-    getRestaurent();
+    getRestaurants();
   }, []);
-  async function getRestaurent() {
+
+  async function getRestaurants() {
     const data = await fetch(
       "https://www.swiggy.com/mapi/homepage/getCards?lat=22.8045665&lng=86.2028754"
     );
     const json = await data.json();
-    setRestaurents(
-      json?.data?.success?.cards[3]?.gridWidget?.gridElements?.infoWithStyle
-        ?.restaurants
-    );
-    console.log(json);
+    const fetchedRestaurants =
+      json?.data?.success?.cards[4]?.gridWidget?.gridElements?.infoWithStyle
+        ?.restaurants || [];
+    setRestaurants(fetchedRestaurants);
+    setFilteredRestaurants(fetchedRestaurants); // Initialize filteredRestaurants with fetched restaurants
   }
 
-  return (
+  return restaurants.length === 0 ? (
+    <Shimmer />
+  ) : (
     <>
       <div className="search-container">
         <input
@@ -50,8 +56,8 @@ const Body = () => {
         />
         <button
           onClick={() => {
-            const data = filterData(searchText, restaurents);
-            setRestaurents(data);
+            const data = filterData(searchText, restaurants);
+            setFilteredRestaurants(data);
           }}
           className="search-btn"
         >
@@ -59,13 +65,12 @@ const Body = () => {
         </button>
       </div>
       <div className="list">
-        {restaurents.map((restaurent) => {
-          return (
-            <RestaurentCard {...restaurent?.info} key={restaurent?.info?.id} />
-          );
-        })}
+        {filteredRestaurants.map((restaurant) => (
+          <RestaurantCard {...restaurant?.info} key={restaurant?.info?.id} />
+        ))}
       </div>
     </>
   );
 };
+
 export default Body;

@@ -1,0 +1,53 @@
+body {
+  overflow-x: hidden;
+}
+
+.nav-items {
+  justify-content: space-between;
+  display: flex;
+}
+
+.header {
+  border: 1px solid #000;
+  justify-content: space-between;
+  display: flex;
+}
+
+.nav-items ul {
+  gap: 20px;
+  padding: 20px;
+  list-style: none;
+  display: flex;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+.Card {
+  text-align: center;
+  border: 1px solid #000;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 250px;
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+}
+
+.Card img {
+  width: 150px;
+  height: 150px;
+}
+
+.list {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  display: flex;
+}
+/*# sourceMappingURL=index.9e4c6fd2.css.map */

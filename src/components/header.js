@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const Title = () => {
   return (
     <a href="/">
@@ -10,6 +12,8 @@ const Title = () => {
   );
 };
 const Header = () => {
+  const [login, setLogin] = useState(true);
+
   return (
     <div className="header">
       <Title />
@@ -21,6 +25,25 @@ const Header = () => {
           <li>Cart</li>
         </ul>
       </div>
+      {login ? (
+        <button
+          className="btn1"
+          onClick={() => {
+            setLogin(false);
+          }}
+        >
+          Login
+        </button>
+      ) : (
+        <button
+          className="btn1"
+          onClick={() => {
+            setLogin(true);
+          }}
+        >
+          Logout
+        </button>
+      )}
     </div>
   );
 };

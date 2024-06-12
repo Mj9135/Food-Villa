@@ -1,14 +1,28 @@
 import { useEffect, useState } from "react";
 import { restaurantList, imgUrl } from "../constants/config";
 import Shimmer from "./shimmer";
+import axios from "axios";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
-const RestaurantCard = ({ name, areaName, cloudinaryImageId, avgRating }) => {
+const RestaurantCard = ({
+  name,
+  areaName,
+  cloudinaryImageId,
+  avgRating,
+  cuisines,
+  costForTwo,
+}) => {
   return (
-    <div className="Card">
+    <div className="card">
       <img src={imgUrl + cloudinaryImageId} alt={name} />
-      <h2>{name}</h2>
-      <h3>{areaName}</h3>
-      <h4>{avgRating} star</h4>
+      <h2 className="name">{name}</h2>
+      <h3 className="cuisines">{cuisines.join(", ")}</h3>
+      <div className="details">
+        <div className={`star ${avgRating >= 4 ? "green" : "yellow"}`}>
+          <i className="fas fa-star"></i> {avgRating}
+        </div>
+        <div className="cost">{costForTwo}</div>
+      </div>
     </div>
   );
 };
@@ -23,25 +37,37 @@ function filterData(searchText, restaurants) {
 const Body = () => {
   const [searchText, setSearchText] = useState("");
   const [restaurants, setRestaurants] = useState([]);
-  const [filteredRestaurants, setFilteredRestaurants] = useState([]);
+  const [filteredRestaurants, setFilteredRestaurants] = useState();
 
   useEffect(() => {
-    getRestaurants();
+    fetchData();
   }, []);
+  const fetchData = async () => {
+    try {
+      const proxyUrl = "https://api.allorigins.win/raw?url="; // CORS proxy URL
+      const apiUrl =
+        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.61450&lng=77.30630&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
 
-  async function getRestaurants() {
-    const data = await fetch(
-      "https://www.swiggy.com/mapi/homepage/getCards?lat=22.8045665&lng=86.2028754"
-    );
-    const json = await data.json();
-    const fetchedRestaurants =
-      json?.data?.success?.cards[4]?.gridWidget?.gridElements?.infoWithStyle
-        ?.restaurants || [];
-    setRestaurants(fetchedRestaurants);
-    setFilteredRestaurants(fetchedRestaurants); // Initialize filteredRestaurants with fetched restaurants
-  }
+      const response = await axios.get(proxyUrl + encodeURIComponent(apiUrl));
+      const json = response.data;
 
-  return restaurants.length === 0 ? (
+      setRestaurants(
+        json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants
+      );
+      setFilteredRestaurants(
+        json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants
+      );
+    } catch (error) {
+      console.log("Error calling API: ", error);
+    }
+  };
+
+  //Early return
+  if (!restaurants) return null;
+
+  return restaurants && restaurants.length === 0 ? (
     <Shimmer />
   ) : (
     <>
@@ -49,6 +75,7 @@ const Body = () => {
         <input
           type="text"
           placeholder="Search"
+          className="search"
           value={searchText}
           onChange={(e) => {
             setSearchText(e.target.value);

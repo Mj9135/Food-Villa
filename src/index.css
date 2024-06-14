@@ -173,3 +173,13 @@ body {
 .shimmer-title.long {
   width: 176px; /* Equivalent to 44px */
 }
+.link {
+  text-decoration: none;
+}
+li {
+  text-decoration: none;
+}
+.menu {
+  display: flex;
+  gap: 100px;
+}

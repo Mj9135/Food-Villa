@@ -2,15 +2,17 @@ import ReactDom from "react-dom/client";
 import React from "react";
 import Header from "./components/header";
 import Body from "./components/body";
-import Footer from "./components/footer";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Footer from "./components/Footer";
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import About from "./components/about";
 import Error from "./components/Error";
+import Contact from "./components/Contact";
+import RestroMenu from "./components/RestroMenu";
 const AppLayout = () => {
   return (
     <>
       <Header />
-      <Body />
+      <Outlet />
       <Footer />
     </>
   );
@@ -20,11 +22,26 @@ const appRouter = createBrowserRouter([
     path: "/",
     element: <AppLayout />,
     errorElement: <Error />,
-  },
-  {
-    path: "/about",
-    element: <About />,
+    children: [
+      {
+        path: "/",
+        element: <Body />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+      {
+        path: "/restaurants/:resId",
+        element: <RestroMenu />,
+      },
+    ],
   },
 ]);
+
 const root = ReactDom.createRoot(document.getElementById("root"));
 root.render(<RouterProvider router={appRouter} />);

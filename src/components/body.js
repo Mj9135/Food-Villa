@@ -3,7 +3,7 @@ import { restaurantList, imgUrl } from "../constants/config";
 import Shimmer from "./shimmer";
 import axios from "axios";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-
+import { Link } from "react-router-dom";
 const RestaurantCard = ({
   name,
   areaName,
@@ -66,6 +66,7 @@ const Body = () => {
 
   //Early return
   if (!restaurants) return null;
+  if (filteredRestaurants?.length === 0) return <h1>No Results Found</h1>;
 
   return restaurants && restaurants.length === 0 ? (
     <Shimmer />
@@ -93,7 +94,13 @@ const Body = () => {
       </div>
       <div className="list">
         {filteredRestaurants.map((restaurant) => (
-          <RestaurantCard {...restaurant?.info} key={restaurant?.info?.id} />
+          <Link
+            to={"/restaurants/" + restaurant.info.id}
+            key={restaurant?.info?.id}
+          >
+            {" "}
+            <RestaurantCard {...restaurant?.info} />
+          </Link>
         ))}
       </div>
     </>

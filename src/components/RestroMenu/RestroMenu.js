@@ -7,10 +7,11 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import ShimmerMenu from "../shimmer/ShimmerMenu";
 import "./RestroMenu.css";
 import { menuImg } from "../../constants/config";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faIndianRupeeSign } from "@fortawesome/free-solid-svg-icons"; // FontAwesome 6 icon
 const RestroMenu = () => {
   const [restro, setRestro] = useState(null);
   const { resId } = useParams();
-  console.log(resId);
 
   useEffect(() => {
     fetchMenu();
@@ -37,7 +38,7 @@ const RestroMenu = () => {
 
       const response = await axios.get(proxyUrl + encodeURIComponent(menuApi));
       const json = response.data;
-      console.log(json.data);
+
       setRestro(json.data);
     } catch (error) {
       console.log("Error fetching menu: ", error);
@@ -63,18 +64,26 @@ const RestroMenu = () => {
           <h4>{avgRatingString}</h4>
         </div>
       </div>
+      <h1 className="menu-head">Menu</h1>
       <div className="menu-item">
         <ul className="menu-list">
           {menu.map((item) => (
             <li className="menuu" key={item?.card?.info?.id}>
-              <div className="menu-name">
-                {item?.card?.info?.name}
-                {item?.card?.info?.price / 100}
-                {item?.card?.info?.description}
+              <div className="menu-namee">
+                <div className="namee"> {item?.card?.info?.name}</div>
+                <div className="namee-rupee">
+                  {" "}
+                  <FontAwesomeIcon
+                    icon={faIndianRupeeSign}
+                    style={{ marginRight: "0.2rem" }}
+                  />
+                  {item?.card?.info?.price / 100}
+                </div>
+                <div className="menu-desc">{item?.card?.info?.description}</div>
               </div>
-
-              <div className="hkjhk">
+              <div className="menu-img">
                 <img src={menuImg + item?.card?.info?.imageId} alt="img" />
+                <button>ADD</button>
               </div>
             </li>
           ))}

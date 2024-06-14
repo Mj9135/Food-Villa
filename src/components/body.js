@@ -46,7 +46,7 @@ const Body = () => {
     try {
       const proxyUrl = "https://api.allorigins.win/raw?url="; // CORS proxy URL
       const apiUrl =
-        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.61450&lng=77.30630&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
+        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.8045665&lng=86.2028754&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
 
       const response = await axios.get(proxyUrl + encodeURIComponent(apiUrl));
       const json = response.data;
@@ -95,6 +95,7 @@ const Body = () => {
       <div className="list">
         {filteredRestaurants.map((restaurant) => (
           <Link
+            style={{ textDecoration: "none", color: "black" }}
             to={"/restaurants/" + restaurant.info.id}
             key={restaurant?.info?.id}
           >

@@ -1,0 +1,39 @@
+.ShimmerMenuContainer {
+  margin-left: 260px;
+  height: 160px;
+  width: 55%;
+  background-color: #9edaec;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 1rem;
+}
+
+.ShimmerMenucard {
+  height: 50%;
+  background-color: #aa0794;
+  margin: 1rem;
+}
+
+.ShimmerMenuTitle {
+  background-color: #0358c0;
+  height: 8px;
+  width: 144px;
+  margin: 1rem;
+}
+
+.ShimmerMenuSubtitle {
+  background-color: #114b91;
+  height: 8px;
+  width: 176px;
+  margin: 1rem;
+}
+
+.ShimmerMenuContent {
+  background-color: #0c4b97;
+  height: 8px;
+  margin: 1rem;
+}

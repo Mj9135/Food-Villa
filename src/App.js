@@ -7,7 +7,7 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import About from "./components/about";
 import Error from "./components/Error";
 import Contact from "./components/Contact";
-import RestroMenu from "./components/RestroMenu";
+import RestroMenu from "./components/RestroMenu/RestroMenu";
 const AppLayout = () => {
   return (
     <>

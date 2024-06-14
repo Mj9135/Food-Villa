@@ -2970,7 +2970,7 @@ var _error = require("./components/Error");
 var _errorDefault = parcelHelpers.interopDefault(_error);
 var _contact = require("./components/Contact");
 var _contactDefault = parcelHelpers.interopDefault(_contact);
-var _restroMenu = require("./components/RestroMenu");
+var _restroMenu = require("./components/RestroMenu/RestroMenu");
 var _restroMenuDefault = parcelHelpers.interopDefault(_restroMenu);
 const AppLayout = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
@@ -3059,7 +3059,7 @@ $RefreshReg$(_c, "AppLayout");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/header":"aorvA","react-router-dom":"9xmpe","./components/Error":"kvula","./components/Footer":"8pPOA","./components/body":"fxbaO","./components/about":"adsiP","./components/Contact":"cgAOG","./components/RestroMenu":"kojLA"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/header":"aorvA","react-router-dom":"9xmpe","./components/Error":"kvula","./components/Footer":"8pPOA","./components/body":"fxbaO","./components/about":"adsiP","./components/Contact":"cgAOG","./components/RestroMenu/RestroMenu":"04p52"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -34412,8 +34412,8 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _config = require("../constants/config");
-var _shimmer = require("./shimmer");
-var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
+var _shimmerCard = require("./shimmer/ShimmerCard");
+var _shimmerCardDefault = parcelHelpers.interopDefault(_shimmerCard);
 var _axios = require("axios");
 var _axiosDefault = parcelHelpers.interopDefault(_axios);
 var _allMinCss = require("@fortawesome/fontawesome-free/css/all.min.css");
@@ -34523,7 +34523,7 @@ const Body = ()=>{
         lineNumber: 53,
         columnNumber: 49
     }, undefined);
-    return restaurants && restaurants.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
+    return restaurants && restaurants.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerCardDefault.default), {}, void 0, false, {
         fileName: "src/components/body.js",
         lineNumber: 54,
         columnNumber: 52
@@ -34602,11 +34602,12 @@ $RefreshReg$(_c1, "Body");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../constants/config":"gXIQ8","./shimmer":"fWXGy","axios":"jo6P5","@fortawesome/fontawesome-free/css/all.min.css":"c1Qzz","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe"}],"gXIQ8":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../constants/config":"gXIQ8","axios":"jo6P5","@fortawesome/fontawesome-free/css/all.min.css":"c1Qzz","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe","./shimmer/ShimmerCard":"lHBxk"}],"gXIQ8":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "restaurentList", ()=>restaurentList);
 parcelHelpers.export(exports, "imgUrl", ()=>imgUrl);
+parcelHelpers.export(exports, "menuImg", ()=>menuImg);
 const restaurentList = [
     {
         type: "restaurants",
@@ -36451,83 +36452,9 @@ const restaurentList = [
     }
 ];
 const imgUrl = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/";
+const menuImg = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/";
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fWXGy":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$79c2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$79c2.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-const Shimmer = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "container",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "shimmer-wrapper",
-            children: Array(9).fill("").map((_, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "shimmer-card",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "shimmer-thumbnail"
-                        }, void 0, false, {
-                            fileName: "src/components/shimmer.js",
-                            lineNumber: 6,
-                            columnNumber: 15
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                            className: "shimmer-title short"
-                        }, void 0, false, {
-                            fileName: "src/components/shimmer.js",
-                            lineNumber: 7,
-                            columnNumber: 15
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                            className: "shimmer-title long"
-                        }, void 0, false, {
-                            fileName: "src/components/shimmer.js",
-                            lineNumber: 8,
-                            columnNumber: 15
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                            className: "shimmer-title"
-                        }, void 0, false, {
-                            fileName: "src/components/shimmer.js",
-                            lineNumber: 9,
-                            columnNumber: 15
-                        }, undefined)
-                    ]
-                }, index, true, {
-                    fileName: "src/components/shimmer.js",
-                    lineNumber: 5,
-                    columnNumber: 46
-                }, undefined))
-        }, void 0, false, {
-            fileName: "src/components/shimmer.js",
-            lineNumber: 4,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/components/shimmer.js",
-        lineNumber: 3,
-        columnNumber: 10
-    }, undefined);
-};
-_c = Shimmer;
-exports.default = Shimmer;
-var _c;
-$RefreshReg$(_c, "Shimmer");
-
-  $parcel$ReactRefreshHelpers$79c2.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jo6P5":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jo6P5":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>(0, _axiosJsDefault.default));
@@ -41228,7 +41155,82 @@ Object.entries(HttpStatusCode).forEach(([key, value])=>{
 });
 exports.default = HttpStatusCode;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"c1Qzz":[function() {},{}],"adsiP":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"c1Qzz":[function() {},{}],"lHBxk":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$7ca5 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$7ca5.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const Shimmer = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "container",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "shimmer-wrapper",
+            children: Array(9).fill("").map((_, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "shimmer-card",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "shimmer-thumbnail"
+                        }, void 0, false, {
+                            fileName: "src/components/shimmer/ShimmerCard.js",
+                            lineNumber: 6,
+                            columnNumber: 15
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                            className: "shimmer-title short"
+                        }, void 0, false, {
+                            fileName: "src/components/shimmer/ShimmerCard.js",
+                            lineNumber: 7,
+                            columnNumber: 15
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                            className: "shimmer-title long"
+                        }, void 0, false, {
+                            fileName: "src/components/shimmer/ShimmerCard.js",
+                            lineNumber: 8,
+                            columnNumber: 15
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                            className: "shimmer-title"
+                        }, void 0, false, {
+                            fileName: "src/components/shimmer/ShimmerCard.js",
+                            lineNumber: 9,
+                            columnNumber: 15
+                        }, undefined)
+                    ]
+                }, index, true, {
+                    fileName: "src/components/shimmer/ShimmerCard.js",
+                    lineNumber: 5,
+                    columnNumber: 46
+                }, undefined))
+        }, void 0, false, {
+            fileName: "src/components/shimmer/ShimmerCard.js",
+            lineNumber: 4,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/shimmer/ShimmerCard.js",
+        lineNumber: 3,
+        columnNumber: 10
+    }, undefined);
+};
+_c = Shimmer;
+exports.default = Shimmer;
+var _c;
+$RefreshReg$(_c, "Shimmer");
+
+  $parcel$ReactRefreshHelpers$7ca5.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"adsiP":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$6418 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -41301,11 +41303,11 @@ $RefreshReg$(_c, "Contact");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kojLA":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$cc16 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"04p52":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$23de = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$cc16.prelude(module);
+$parcel$ReactRefreshHelpers$23de.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -41314,11 +41316,15 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactRouterDom = require("react-router-dom");
-var _config = require("../constants/config");
-var _shimmer = require("./shimmer");
-var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
+var _config = require("../../constants/config");
+var _shimmerCard = require("../shimmer/ShimmerCard");
+var _shimmerCardDefault = parcelHelpers.interopDefault(_shimmerCard);
 var _axios = require("axios");
 var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _allMinCss = require("@fortawesome/fontawesome-free/css/all.min.css");
+var _shimmerMenu = require("../shimmer/ShimmerMenu");
+var _shimmerMenuDefault = parcelHelpers.interopDefault(_shimmerMenu);
+var _restroMenuCss = require("./RestroMenu.css");
 var _s = $RefreshSig$();
 const RestroMenu = ()=>{
     _s();
@@ -41330,122 +41336,165 @@ const RestroMenu = ()=>{
     }, []);
     const { city = "", name = "", cloudinaryImageId = "", cuisines = [], costForTwoMessage = "", avgRatingString = "" } = restro?.cards?.[2]?.card?.card?.info || {};
     const menu = restro?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards || [];
+    console.log(menu);
     const fetchMenu = async ()=>{
         try {
             const proxyUrl = "https://api.allorigins.win/raw?url=";
             const menuApi = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.65420&lng=77.23730&restaurantId=" + resId;
             const response = await (0, _axiosDefault.default).get(proxyUrl + encodeURIComponent(menuApi));
             const json = response.data;
+            console.log(json.data);
             setRestro(json.data);
         } catch (error) {
             console.log("Error fetching menu: ", error);
         }
     };
-    return !restro ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
-        fileName: "src/components/RestroMenu.js",
-        lineNumber: 35,
+    return !restro ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerMenuDefault.default), {}, void 0, false, {
+        fileName: "src/components/RestroMenu/RestroMenu.js",
+        lineNumber: 41,
         columnNumber: 20
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "menu",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "menu-details",
                 children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                        children: "This Is Menu Page"
-                    }, void 0, false, {
-                        fileName: "src/components/RestroMenu.js",
-                        lineNumber: 37,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "menu-name",
                         children: [
-                            "City: ",
-                            city
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                children: name
+                            }, void 0, false, {
+                                fileName: "src/components/RestroMenu/RestroMenu.js",
+                                lineNumber: 44,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                children: cuisines.join(" , ")
+                            }, void 0, false, {
+                                fileName: "src/components/RestroMenu/RestroMenu.js",
+                                lineNumber: 45,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                children: city
+                            }, void 0, false, {
+                                fileName: "src/components/RestroMenu/RestroMenu.js",
+                                lineNumber: 46,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                                children: costForTwoMessage
+                            }, void 0, false, {
+                                fileName: "src/components/RestroMenu/RestroMenu.js",
+                                lineNumber: 47,
+                                columnNumber: 11
+                            }, undefined)
                         ]
                     }, void 0, true, {
-                        fileName: "src/components/RestroMenu.js",
-                        lineNumber: 38,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                        children: [
-                            "Name: ",
-                            name
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/RestroMenu.js",
-                        lineNumber: 39,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                        src: (0, _config.imgUrl) + cloudinaryImageId,
-                        alt: name
-                    }, void 0, false, {
-                        fileName: "src/components/RestroMenu.js",
-                        lineNumber: 40,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                        children: [
-                            "Rating: ",
-                            avgRatingString,
-                            " Star"
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/RestroMenu.js",
-                        lineNumber: 41,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                        children: [
-                            "Cost For Two: ",
-                            costForTwoMessage
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/RestroMenu.js",
-                        lineNumber: 42,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                        children: [
-                            "Cuisines: ",
-                            cuisines.join(" , ")
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/RestroMenu.js",
+                        fileName: "src/components/RestroMenu/RestroMenu.js",
                         lineNumber: 43,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "menu-img",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                            src: (0, _config.imgUrl) + cloudinaryImageId,
+                            alt: name
+                        }, void 0, false, {
+                            fileName: "src/components/RestroMenu/RestroMenu.js",
+                            lineNumber: 50,
+                            columnNumber: 11
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/components/RestroMenu/RestroMenu.js",
+                        lineNumber: 49,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: `starx ${avgRatingString >= 4 ? "greenx" : "yellowx"}`,
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                className: "fas fa-star"
+                            }, void 0, false, {
+                                fileName: "src/components/RestroMenu/RestroMenu.js",
+                                lineNumber: 53,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                                children: avgRatingString
+                            }, void 0, false, {
+                                fileName: "src/components/RestroMenu/RestroMenu.js",
+                                lineNumber: 54,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/RestroMenu/RestroMenu.js",
+                        lineNumber: 52,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/RestroMenu.js",
-                lineNumber: 36,
+                fileName: "src/components/RestroMenu/RestroMenu.js",
+                lineNumber: 42,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "menu-item",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                    className: "menu-list",
                     children: menu.map((item)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: item?.card?.info?.name
-                        }, item?.card?.info?.id, false, {
-                            fileName: "src/components/RestroMenu.js",
-                            lineNumber: 47,
+                            className: "menuu",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "menu-name",
+                                    children: [
+                                        item?.card?.info?.name,
+                                        item?.card?.info?.price / 100,
+                                        item?.card?.info?.description
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/components/RestroMenu/RestroMenu.js",
+                                    lineNumber: 60,
+                                    columnNumber: 15
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "hkjhk",
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                        src: (0, _config.menuImg) + item?.card?.info?.imageId,
+                                        alt: "img"
+                                    }, void 0, false, {
+                                        fileName: "src/components/RestroMenu/RestroMenu.js",
+                                        lineNumber: 67,
+                                        columnNumber: 17
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/components/RestroMenu/RestroMenu.js",
+                                    lineNumber: 66,
+                                    columnNumber: 15
+                                }, undefined)
+                            ]
+                        }, item?.card?.info?.id, true, {
+                            fileName: "src/components/RestroMenu/RestroMenu.js",
+                            lineNumber: 59,
                             columnNumber: 29
                         }, undefined))
                 }, void 0, false, {
-                    fileName: "src/components/RestroMenu.js",
-                    lineNumber: 46,
+                    fileName: "src/components/RestroMenu/RestroMenu.js",
+                    lineNumber: 58,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
-                fileName: "src/components/RestroMenu.js",
-                lineNumber: 45,
+                fileName: "src/components/RestroMenu/RestroMenu.js",
+                lineNumber: 57,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
-        fileName: "src/components/RestroMenu.js",
-        lineNumber: 35,
-        columnNumber: 34
+        fileName: "src/components/RestroMenu/RestroMenu.js",
+        lineNumber: 41,
+        columnNumber: 38
     }, undefined);
 };
 _s(RestroMenu, "FwUBY3iNdWen/cvk4CbqKfwkCIg=", false, function() {
@@ -41458,11 +41507,79 @@ exports.default = RestroMenu;
 var _c;
 $RefreshReg$(_c, "RestroMenu");
 
-  $parcel$ReactRefreshHelpers$cc16.postlude(module);
+  $parcel$ReactRefreshHelpers$23de.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","react-router-dom":"9xmpe","react":"21dqq","axios":"jo6P5","../constants/config":"gXIQ8","./shimmer":"fWXGy"}]},["9wh9R","1xC6H","2kQhy"], "2kQhy", "parcelRequiref158")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","../../constants/config":"gXIQ8","../shimmer/ShimmerCard":"lHBxk","axios":"jo6P5","../shimmer/ShimmerMenu":"6MSZC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./RestroMenu.css":"5SBsh","@fortawesome/fontawesome-free/css/all.min.css":"c1Qzz"}],"6MSZC":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$cf4c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$cf4c.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _shimmerMenuCss = require("./ShimmerMenu.css");
+const ShimmerMenu = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: Array(3).fill("").map((_, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "ShimmerMenuContainer",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "ShimmerMenucard"
+                    }, void 0, false, {
+                        fileName: "src/components/shimmer/ShimmerMenu.js",
+                        lineNumber: 6,
+                        columnNumber: 13
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        className: "ShimmerMenuTitle"
+                    }, void 0, false, {
+                        fileName: "src/components/shimmer/ShimmerMenu.js",
+                        lineNumber: 7,
+                        columnNumber: 13
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        className: "ShimmerMenuSubtitle"
+                    }, void 0, false, {
+                        fileName: "src/components/shimmer/ShimmerMenu.js",
+                        lineNumber: 8,
+                        columnNumber: 13
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        className: "ShimmerMenuContent"
+                    }, void 0, false, {
+                        fileName: "src/components/shimmer/ShimmerMenu.js",
+                        lineNumber: 9,
+                        columnNumber: 13
+                    }, undefined)
+                ]
+            }, index, true, {
+                fileName: "src/components/shimmer/ShimmerMenu.js",
+                lineNumber: 5,
+                columnNumber: 44
+            }, undefined))
+    }, void 0, false, {
+        fileName: "src/components/shimmer/ShimmerMenu.js",
+        lineNumber: 4,
+        columnNumber: 10
+    }, undefined);
+};
+_c = ShimmerMenu;
+exports.default = ShimmerMenu;
+var _c;
+$RefreshReg$(_c, "ShimmerMenu");
+
+  $parcel$ReactRefreshHelpers$cf4c.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./ShimmerMenu.css":"DAZjR","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"DAZjR":[function() {},{}],"5SBsh":[function() {},{}],"c1Qzz":[function() {},{}]},["9wh9R","1xC6H","2kQhy"], "2kQhy", "parcelRequiref158")
 
 //# sourceMappingURL=index.7271efb6.js.map

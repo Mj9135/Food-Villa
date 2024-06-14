@@ -179,7 +179,3 @@ body {
 li {
   text-decoration: none;
 }
-.menu {
-  display: flex;
-  gap: 100px;
-}

@@ -41324,28 +41324,26 @@ const RestroMenu = ()=>{
     _s();
     const [restro, setRestro] = (0, _react.useState)(null);
     const { resId } = (0, _reactRouterDom.useParams)();
+    console.log(resId);
     (0, _react.useEffect)(()=>{
         fetchMenu();
-    }, []); // Include resId in the dependency array to fetch new data when resId changes
+    }, []);
     const { city = "", name = "", cloudinaryImageId = "", cuisines = [], costForTwoMessage = "", avgRatingString = "" } = restro?.cards?.[2]?.card?.card?.info || {};
-    console.log("hi");
     const menu = restro?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards || [];
-    console.log(menu);
     const fetchMenu = async ()=>{
         try {
             const proxyUrl = "https://api.allorigins.win/raw?url=";
-            const menuApi = `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.65420&lng=77.23730&restaurant=${resId}`;
+            const menuApi = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.65420&lng=77.23730&restaurantId=" + resId;
             const response = await (0, _axiosDefault.default).get(proxyUrl + encodeURIComponent(menuApi));
             const json = response.data;
             setRestro(json.data);
         } catch (error) {
             console.log("Error fetching menu: ", error);
-        // Handle error state or retry mechanism
         }
     };
     return !restro ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
         fileName: "src/components/RestroMenu.js",
-        lineNumber: 38,
+        lineNumber: 35,
         columnNumber: 20
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "menu",
@@ -41356,7 +41354,7 @@ const RestroMenu = ()=>{
                         children: "This Is Menu Page"
                     }, void 0, false, {
                         fileName: "src/components/RestroMenu.js",
-                        lineNumber: 40,
+                        lineNumber: 37,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
@@ -41366,7 +41364,7 @@ const RestroMenu = ()=>{
                         ]
                     }, void 0, true, {
                         fileName: "src/components/RestroMenu.js",
-                        lineNumber: 41,
+                        lineNumber: 38,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
@@ -41376,7 +41374,7 @@ const RestroMenu = ()=>{
                         ]
                     }, void 0, true, {
                         fileName: "src/components/RestroMenu.js",
-                        lineNumber: 42,
+                        lineNumber: 39,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
@@ -41384,7 +41382,7 @@ const RestroMenu = ()=>{
                         alt: name
                     }, void 0, false, {
                         fileName: "src/components/RestroMenu.js",
-                        lineNumber: 43,
+                        lineNumber: 40,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
@@ -41395,7 +41393,7 @@ const RestroMenu = ()=>{
                         ]
                     }, void 0, true, {
                         fileName: "src/components/RestroMenu.js",
-                        lineNumber: 44,
+                        lineNumber: 41,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
@@ -41405,7 +41403,7 @@ const RestroMenu = ()=>{
                         ]
                     }, void 0, true, {
                         fileName: "src/components/RestroMenu.js",
-                        lineNumber: 45,
+                        lineNumber: 42,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
@@ -41415,13 +41413,13 @@ const RestroMenu = ()=>{
                         ]
                     }, void 0, true, {
                         fileName: "src/components/RestroMenu.js",
-                        lineNumber: 46,
+                        lineNumber: 43,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/RestroMenu.js",
-                lineNumber: 39,
+                lineNumber: 36,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -41430,23 +41428,23 @@ const RestroMenu = ()=>{
                             children: item?.card?.info?.name
                         }, item?.card?.info?.id, false, {
                             fileName: "src/components/RestroMenu.js",
-                            lineNumber: 50,
+                            lineNumber: 47,
                             columnNumber: 29
                         }, undefined))
                 }, void 0, false, {
                     fileName: "src/components/RestroMenu.js",
-                    lineNumber: 49,
+                    lineNumber: 46,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/RestroMenu.js",
-                lineNumber: 48,
+                lineNumber: 45,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/RestroMenu.js",
-        lineNumber: 38,
+        lineNumber: 35,
         columnNumber: 34
     }, undefined);
 };

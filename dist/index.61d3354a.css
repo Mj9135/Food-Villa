@@ -28,70 +28,94 @@ body {
 .list {
   flex-wrap: wrap;
   justify-content: space-around;
-  gap: 40px;
+  gap: 11px;
   margin-top: 30px;
-  padding: 0 80px;
+  padding: 0 120px;
   display: flex;
 }
 
 .card {
-  text-align: left;
   cursor: pointer;
-  text-align: center;
-  border: 1px solid #000;
   border-radius: 10px;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 260px;
-  height: 450px;
-  padding: 20px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 200px;
+  height: 240px;
+  margin-top: 30px;
+  padding: 10px 10px 50px;
+  transition: all .1s ease-in-out;
   display: flex;
-}
-
-.name {
-  text-align: left;
-  text-align: center;
-  font-size: 20px;
-}
-
-.cuisines {
-  text-align: left;
-  text-align: center;
-  font-size: 14px;
+  box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -1px #0000000f;
 }
 
 .card:hover {
-  transition: all .5s ease-in-out;
-  box-shadow: 0 5px 15px #00000059;
+  scale: .95;
 }
 
-.card > * {
-  margin: 8px 0;
+.card-details {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 5px;
+  padding: 5px 5px 5px 10px;
+  display: flex;
+}
+
+.card-details > * {
+  margin: -2px;
+  font-size: 14px;
+}
+
+.name {
+  font-size: 18px;
+}
+
+.minute {
+  padding-left: 20px;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .star {
   color: #fff;
-  border-radius: 10px;
-  width: 50px;
+  border-radius: 50%;
+  width: 20px;
   height: 20px;
-  padding: 5px;
+  padding: 3px;
+  font-size: 16px;
 }
 
 .card img {
   border-radius: 10px;
-  width: 240px;
-  height: 310px;
+  width: 200px;
+  height: 132px;
 }
 
-.details {
-  align-items: center;
-  gap: 60px;
-  display: flex;
+.rate {
+  font-size: 16px;
+}
+
+.cost {
+  margin-top: 5px;
+  font-size: 16px;
+}
+
+.cuisines {
+  text-align: left;
+  font-size: 16px;
+  font-weight: 300;
 }
 
 .green {
   background-color: #4bb94b;
+}
+
+.startt {
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  display: flex;
 }
 
 .yellow {
@@ -100,13 +124,6 @@ body {
 
 .red {
   background-color: #dd0c0c;
-}
-
-.cost {
-  color: #000;
-  background-color: #92dcf3;
-  border-radius: 10px;
-  padding: 5px 10px;
 }
 
 .search-container {

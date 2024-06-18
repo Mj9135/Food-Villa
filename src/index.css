@@ -24,60 +24,83 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  gap: 40px;
+  gap: 11px;
   margin-top: 30px;
-  padding: 0px 80px;
+  padding: 0px 120px;
 }
 .card {
-  width: 260px;
-  height: 450px;
+  width: 200px;
+  height: 240px;
+  margin-top: 30px;
+  padding: 10px;
+  padding-bottom: 50px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: left;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   flex-direction: column;
   border-radius: 10px;
   cursor: pointer;
-  padding: 20px;
-  border: 1px solid black;
-  text-align: center;
-}
-.name {
-  font-size: 20px;
-  text-align: left;
-  text-align: center;
-}
-.cuisines {
-  font-size: 14px;
-  text-align: left;
-  text-align: center;
+  transition: all ease-in-out 0.1s;
 }
 .card:hover {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  transition: all ease-in-out 0.5s;
+  scale: 0.95;
 }
-.card > * {
-  margin: 8px 0;
+.card-details {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 5px;
+  padding-left: 10px;
+}
+.card-details > * {
+  margin: -2px;
+  font-size: 14px;
+}
+.name {
+  font-size: 18px;
+}
+.minute {
+  padding-left: 20px;
+  font-weight: 700;
+  font-size: 16px;
 }
 .star {
-  width: 50px;
+  width: 20px;
   height: 20px;
-  border-radius: 10px;
+  border-radius: 50%;
   color: white;
-  padding: 5px;
+  padding: 3px;
+  font-size: 16px;
 }
 .card img {
-  width: 240px;
-  height: 310px;
+  width: 200px;
+  height: 132px;
   border-radius: 10px;
 }
-.details {
-  display: flex;
-  gap: 60px;
-  align-items: center;
+.rate {
+  font-size: 16px;
+}
+.cost {
+  margin-top: 5px;
+  font-size: 16px;
+}
+.cuisines {
+  text-align: left;
+  font-size: 16px;
+  font-weight: 300;
 }
 .green {
   background-color: rgb(75, 185, 75);
+}
+.startt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
 }
 .yellow {
   background-color: rgb(247, 171, 7);
@@ -85,12 +108,7 @@ body {
 .red {
   background-color: rgb(221, 12, 12);
 }
-.cost {
-  color: black;
-  background-color: rgb(146, 220, 243);
-  padding: 5px 10px;
-  border-radius: 10px;
-}
+
 .search-container {
   margin-top: 30px;
   margin-left: 90px;

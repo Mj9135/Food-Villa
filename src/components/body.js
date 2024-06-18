@@ -10,18 +10,25 @@ const RestaurantCard = ({
   cloudinaryImageId,
   avgRating,
   cuisines,
-  costForTwo,
+  sla,
 }) => {
+  const truncatedCuisines = cuisines.slice(0, 2).join(", ") + "...";
+  console.log(sla.slaString);
   return (
     <div className="card">
       <img src={imgUrl + cloudinaryImageId} alt={name} />
-      <h2 className="name">{name}</h2>
-      <h3 className="cuisines">{cuisines.join(", ")}</h3>
-      <div className="details">
-        <div className={`star ${avgRating >= 4 ? "green" : "yellow"}`}>
-          <i className="fas fa-star"></i> {avgRating}
+      <div className="card-details">
+        <h2 className="name">{name}</h2>
+        <div className="startt">
+          <span className={`star ${avgRating >= 4 ? "green" : "yellow"}`}>
+            <i className="fas fa-star"></i>
+          </span>
+
+          <h3 class="rate">{avgRating}</h3>
+          <div class="minute">{sla.slaString}</div>
         </div>
-        <div className="cost">{costForTwo}</div>
+        <div className="cuisines">{truncatedCuisines}</div>
+        <div className="cost">{areaName}</div>
       </div>
     </div>
   );

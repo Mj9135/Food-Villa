@@ -2959,8 +2959,8 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _header = require("./components/header");
 var _headerDefault = parcelHelpers.interopDefault(_header);
-var _bodyJs = require("./components/Body.js");
-var _bodyJsDefault = parcelHelpers.interopDefault(_bodyJs);
+var _bodyyJs = require("./components/Bodyy.js");
+var _bodyyJsDefault = parcelHelpers.interopDefault(_bodyyJs);
 var _footer = require("./components/Footer");
 var _footerDefault = parcelHelpers.interopDefault(_footer);
 var _reactRouterDom = require("react-router-dom");
@@ -3010,7 +3010,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
         children: [
             {
                 path: "/",
-                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyJsDefault.default), {}, void 0, false, {
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyyJsDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
                     lineNumber: 24,
                     columnNumber: 14
@@ -3059,7 +3059,7 @@ $RefreshReg$(_c, "AppLayout");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/header":"aorvA","react-router-dom":"9xmpe","./components/Error":"kvula","./components/Footer":"8pPOA","./components/about":"adsiP","./components/Contact":"cgAOG","./components/RestroMenu/RestroMenu":"04p52","./components/Body.js":"8yaV8"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/header":"aorvA","react-router-dom":"9xmpe","./components/Error":"kvula","./components/Footer":"8pPOA","./components/about":"adsiP","./components/Contact":"cgAOG","./components/RestroMenu/RestroMenu":"04p52","./components/Bodyy.js":"ghY8R"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -66817,11 +66817,11 @@ var icons = {
     faLevelUpAlt: faLevelUpAlt
 };
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8yaV8":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$0606 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ghY8R":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$7d30 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$0606.prelude(module);
+$parcel$ReactRefreshHelpers$7d30.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -66846,7 +66846,7 @@ const RestaurantCard = ({ name, areaName, cloudinaryImageId, avgRating, cuisines
                 src: (0, _config.imgUrl) + cloudinaryImageId,
                 alt: name
             }, void 0, false, {
-                fileName: "src/components/Body.js",
+                fileName: "src/components/Bodyy.js",
                 lineNumber: 18,
                 columnNumber: 7
             }, undefined),
@@ -66857,7 +66857,7 @@ const RestaurantCard = ({ name, areaName, cloudinaryImageId, avgRating, cuisines
                         className: "name",
                         children: name
                     }, void 0, false, {
-                        fileName: "src/components/Body.js",
+                        fileName: "src/components/Bodyy.js",
                         lineNumber: 20,
                         columnNumber: 9
                     }, undefined),
@@ -66869,12 +66869,12 @@ const RestaurantCard = ({ name, areaName, cloudinaryImageId, avgRating, cuisines
                                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
                                     className: "fas fa-star"
                                 }, void 0, false, {
-                                    fileName: "src/components/Body.js",
+                                    fileName: "src/components/Bodyy.js",
                                     lineNumber: 23,
                                     columnNumber: 13
                                 }, undefined)
                             }, void 0, false, {
-                                fileName: "src/components/Body.js",
+                                fileName: "src/components/Bodyy.js",
                                 lineNumber: 22,
                                 columnNumber: 11
                             }, undefined),
@@ -66882,7 +66882,7 @@ const RestaurantCard = ({ name, areaName, cloudinaryImageId, avgRating, cuisines
                                 class: "rate",
                                 children: avgRating
                             }, void 0, false, {
-                                fileName: "src/components/Body.js",
+                                fileName: "src/components/Bodyy.js",
                                 lineNumber: 26,
                                 columnNumber: 11
                             }, undefined),
@@ -66890,13 +66890,13 @@ const RestaurantCard = ({ name, areaName, cloudinaryImageId, avgRating, cuisines
                                 class: "minute",
                                 children: sla.slaString
                             }, void 0, false, {
-                                fileName: "src/components/Body.js",
+                                fileName: "src/components/Bodyy.js",
                                 lineNumber: 27,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
-                        fileName: "src/components/Body.js",
+                        fileName: "src/components/Bodyy.js",
                         lineNumber: 21,
                         columnNumber: 9
                     }, undefined),
@@ -66904,7 +66904,7 @@ const RestaurantCard = ({ name, areaName, cloudinaryImageId, avgRating, cuisines
                         className: "cuisines",
                         children: truncatedCuisines
                     }, void 0, false, {
-                        fileName: "src/components/Body.js",
+                        fileName: "src/components/Bodyy.js",
                         lineNumber: 29,
                         columnNumber: 9
                     }, undefined),
@@ -66912,19 +66912,19 @@ const RestaurantCard = ({ name, areaName, cloudinaryImageId, avgRating, cuisines
                         className: "cost",
                         children: areaName
                     }, void 0, false, {
-                        fileName: "src/components/Body.js",
+                        fileName: "src/components/Bodyy.js",
                         lineNumber: 30,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/Body.js",
+                fileName: "src/components/Bodyy.js",
                 lineNumber: 19,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
-        fileName: "src/components/Body.js",
+        fileName: "src/components/Bodyy.js",
         lineNumber: 17,
         columnNumber: 10
     }, undefined);
@@ -66959,12 +66959,12 @@ const Body = ()=>{
     if (filteredRestaurants?.length === 0) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
         children: "No Results Found"
     }, void 0, false, {
-        fileName: "src/components/Body.js",
+        fileName: "src/components/Bodyy.js",
         lineNumber: 60,
         columnNumber: 49
     }, undefined);
     return restaurants && restaurants.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerCardDefault.default), {}, void 0, false, {
-        fileName: "src/components/Body.js",
+        fileName: "src/components/Bodyy.js",
         lineNumber: 61,
         columnNumber: 52
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
@@ -66981,7 +66981,7 @@ const Body = ()=>{
                             setSearchText(e.target.value);
                         }
                     }, void 0, false, {
-                        fileName: "src/components/Body.js",
+                        fileName: "src/components/Bodyy.js",
                         lineNumber: 63,
                         columnNumber: 9
                     }, undefined),
@@ -66993,13 +66993,13 @@ const Body = ()=>{
                         className: "search-btn",
                         children: "Submit"
                     }, void 0, false, {
-                        fileName: "src/components/Body.js",
+                        fileName: "src/components/Bodyy.js",
                         lineNumber: 66,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/Body.js",
+                fileName: "src/components/Bodyy.js",
                 lineNumber: 62,
                 columnNumber: 7
             }, undefined),
@@ -67016,18 +67016,18 @@ const Body = ()=>{
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {
                                 ...restaurant?.info
                             }, void 0, false, {
-                                fileName: "src/components/Body.js",
+                                fileName: "src/components/Bodyy.js",
                                 lineNumber: 79,
                                 columnNumber: 13
                             }, undefined)
                         ]
                     }, restaurant?.info?.id, true, {
-                        fileName: "src/components/Body.js",
+                        fileName: "src/components/Bodyy.js",
                         lineNumber: 74,
                         columnNumber: 48
                     }, undefined))
             }, void 0, false, {
-                fileName: "src/components/Body.js",
+                fileName: "src/components/Bodyy.js",
                 lineNumber: 73,
                 columnNumber: 7
             }, undefined)
@@ -67041,7 +67041,7 @@ var _c, _c1;
 $RefreshReg$(_c, "RestaurantCard");
 $RefreshReg$(_c1, "Body");
 
-  $parcel$ReactRefreshHelpers$0606.postlude(module);
+  $parcel$ReactRefreshHelpers$7d30.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;

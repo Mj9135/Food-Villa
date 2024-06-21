@@ -37,6 +37,14 @@ const Header = () => {
               Contact
             </Link>
           </li>
+          <li>
+            <Link
+              style={{ textDecoration: "none", color: "black" }}
+              to="/instamart"
+            >
+              Instamart
+            </Link>
+          </li>
           <li>Cart</li>
         </ul>
       </div>

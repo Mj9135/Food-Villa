@@ -5,6 +5,8 @@ import axios from "axios";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { Link } from "react-router-dom";
 import { filterData } from "./utils/helper";
+import useOnline from "./utils/useOnline";
+import useRestaurent from "./utils/useRestaurent";
 const RestaurantCard = ({
   name,
   areaName,
@@ -14,7 +16,7 @@ const RestaurantCard = ({
   sla,
 }) => {
   const truncatedCuisines = cuisines.slice(0, 2).join(", ") + "...";
-  console.log(sla.slaString);
+
   return (
     <div className="card">
       <img src={imgUrl + cloudinaryImageId} alt={name} />
@@ -25,8 +27,8 @@ const RestaurantCard = ({
             <i className="fas fa-star"></i>
           </span>
 
-          <h3 class="rate">{avgRating}</h3>
-          <div class="minute">{sla.slaString}</div>
+          <h3 className="rate">{avgRating}</h3>
+          <div className="minute">{sla.slaString}</div>
         </div>
         <div className="cuisines">{truncatedCuisines}</div>
         <div className="cost">{areaName}</div>
@@ -37,37 +39,19 @@ const RestaurantCard = ({
 
 const Body = () => {
   const [searchText, setSearchText] = useState("");
-  const [restaurants, setRestaurants] = useState([]);
-  const [filteredRestaurants, setFilteredRestaurants] = useState();
-
+  const [filteredRestaurants, setFilteredRestaurants] = useState([]);
+  const restaurants = useRestaurent();
   useEffect(() => {
-    fetchData();
-  }, []);
-  const fetchData = async () => {
-    try {
-      const proxyUrl = "https://api.allorigins.win/raw?url="; // CORS proxy URL
-      const apiUrl =
-        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.8045665&lng=86.2028754&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
-
-      const response = await axios.get(proxyUrl + encodeURIComponent(apiUrl));
-      const json = response.data;
-
-      setRestaurants(
-        json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
-          ?.restaurants
-      );
-      setFilteredRestaurants(
-        json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
-          ?.restaurants
-      );
-    } catch (error) {
-      console.log("Error calling API: ", error);
-    }
-  };
-
+    setFilteredRestaurants(restaurants);
+  }, [restaurants]);
+  const isOnline = useOnline();
+  if (!isOnline) {
+    return <h1>Please Check Your Internet Connection</h1>;
+  }
   //Early return
   if (!restaurants) return null;
-  if (filteredRestaurants?.length === 0) return <h1>No Results Found</h1>;
+  if (filteredRestaurants?.length === 0 && searchText)
+    return <h1>No Results Found</h1>;
 
   return restaurants && restaurants.length === 0 ? (
     <Shimmer />

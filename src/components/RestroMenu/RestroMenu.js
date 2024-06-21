@@ -24,7 +24,7 @@ const RestroMenu = () => {
   const menu =
     restro?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card
       ?.itemCards || [];
-  console.log(menu);
+
   return !restro ? (
     <ShimmerMenu />
   ) : (

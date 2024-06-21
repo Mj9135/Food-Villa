@@ -1,73 +1,48 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-const Title = () => {
-  return (
-    <a href="/">
-      <img
-        className="logo"
-        src="https://yt3.ggpht.com/ytc/AKedOLSpK3T_2RxkMYb-pk9oENQB0NvYpeOdXRgQe8i5=s800-c-k-c0x00ffffff-no-rj"
-        alt="logo"
-      />
-    </a>
-  );
-};
+import React, { useState } from "react";
+import { Link } from "react-router-dom"; // Assuming you're using React Router
+
 const Header = () => {
-  const [login, setLogin] = useState(true);
+  const [login, setLogin] = useState(false);
 
   return (
-    <div className="header">
-      <Title />
-      <div className="nav-items">
-        <ul>
+    <div className="flex justify-between items-center h-20 px-4 bg-white shadow-lg">
+      <div>
+        <h1 className="text-xl font-bold">FoodCourt</h1>
+      </div>
+      <div className="flex gap-6">
+        <ul className="flex gap-6 list-none">
           <li>
-            <Link style={{ textDecoration: "none" }} to="/">
+            <Link to="/" className="text-black no-underline">
               Home
             </Link>
           </li>
           <li>
-            <Link style={{ textDecoration: "none" }} to="/about">
+            <Link to="/about" className="text-black no-underline">
               About
             </Link>
           </li>
           <li>
-            <Link
-              style={{ textDecoration: "none", color: "black" }}
-              to="/contact"
-            >
+            <Link to="/contact" className="text-black no-underline">
               Contact
             </Link>
           </li>
           <li>
-            <Link
-              style={{ textDecoration: "none", color: "black" }}
-              to="/instamart"
-            >
+            <Link to="/instamart" className="text-black no-underline">
               Instamart
             </Link>
           </li>
-          <li>Cart</li>
         </ul>
+        <div>
+          <button
+            className="border-2 px-4 py-2"
+            onClick={() => setLogin(!login)}
+          >
+            {login ? "Logout" : "Login"}
+          </button>
+        </div>
       </div>
-      {login ? (
-        <button
-          className="btn1"
-          onClick={() => {
-            setLogin(false);
-          }}
-        >
-          Login
-        </button>
-      ) : (
-        <button
-          className="btn1"
-          onClick={() => {
-            setLogin(true);
-          }}
-        >
-          Logout
-        </button>
-      )}
     </div>
   );
 };
+
 export default Header;

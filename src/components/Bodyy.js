@@ -44,15 +44,14 @@ const Body = () => {
             const data = filterData(searchText, restaurants);
             setFilteredRestaurants(data);
           }}
-          className="search-btn"
+          className="mt-10"
         >
           Submit
         </button>
       </div>
-      <div className="list">
+      <div className="flex flex-wrap justify-around gap-3 mt-7 px-32">
         {filteredRestaurants.map((restaurant) => (
           <Link
-            style={{ textDecoration: "none", color: "black" }}
             to={"/restaurants/" + restaurant.info.id}
             key={restaurant?.info?.id}
           >

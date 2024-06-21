@@ -5,7 +5,6 @@ import Shimmer from "../shimmer/ShimmerCard";
 import axios from "axios";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import ShimmerMenu from "../shimmer/ShimmerMenu";
-import "./RestroMenu.css";
 import { menuImg } from "../../constants/config";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faIndianRupeeSign } from "@fortawesome/free-solid-svg-icons"; // FontAwesome 6 icon
@@ -24,7 +23,6 @@ const RestroMenu = () => {
   const menu =
     restro?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card
       ?.itemCards || [];
-
   return !restro ? (
     <ShimmerMenu />
   ) : (

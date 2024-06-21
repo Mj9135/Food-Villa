@@ -4,6 +4,7 @@ import Shimmer from "./shimmer/ShimmerCard";
 import axios from "axios";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { Link } from "react-router-dom";
+import { filterData } from "./utils/helper";
 const RestaurantCard = ({
   name,
   areaName,
@@ -33,13 +34,6 @@ const RestaurantCard = ({
     </div>
   );
 };
-
-function filterData(searchText, restaurants) {
-  const data = restaurants.filter((restaurant) =>
-    restaurant.info.name.toLowerCase().includes(searchText.toLowerCase())
-  );
-  return data;
-}
 
 const Body = () => {
   const [searchText, setSearchText] = useState("");

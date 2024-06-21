@@ -9,14 +9,10 @@ import "./RestroMenu.css";
 import { menuImg } from "../../constants/config";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faIndianRupeeSign } from "@fortawesome/free-solid-svg-icons"; // FontAwesome 6 icon
+import useRestroMenu from "../utils/useRestroMenu";
 const RestroMenu = () => {
-  const [restro, setRestro] = useState(null);
   const { resId } = useParams();
-
-  useEffect(() => {
-    fetchMenu();
-  }, []);
-
+  const restro = useRestroMenu(resId);
   const {
     city = "",
     name = "",
@@ -29,22 +25,6 @@ const RestroMenu = () => {
     restro?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card
       ?.itemCards || [];
   console.log(menu);
-  const fetchMenu = async () => {
-    try {
-      const proxyUrl = "https://api.allorigins.win/raw?url=";
-      const menuApi =
-        "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.65420&lng=77.23730&restaurantId=" +
-        resId;
-
-      const response = await axios.get(proxyUrl + encodeURIComponent(menuApi));
-      const json = response.data;
-
-      setRestro(json.data);
-    } catch (error) {
-      console.log("Error fetching menu: ", error);
-    }
-  };
-
   return !restro ? (
     <ShimmerMenu />
   ) : (

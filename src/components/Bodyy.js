@@ -49,7 +49,7 @@ const Body = () => {
           Submit
         </button>
       </div>
-      <div className="flex flex-wrap justify-around gap-3 mt-7 px-32">
+      <div className="flex contain flex-wrap justify-around gap-3 mt-7 px-32">
         {filteredRestaurants.map((restaurant) => (
           <Link
             to={"/restaurants/" + restaurant.info.id}

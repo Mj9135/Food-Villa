@@ -26,28 +26,35 @@ const RestroMenu = () => {
   return !restro ? (
     <ShimmerMenu />
   ) : (
-    <div className="menu">
-      <div className="menu-details">
-        <div className="menu-name">
-          <h2>{name}</h2>
+    <div className="flex flex-col  justify-center items-center">
+      <div className="flex shadow-2xl w-[830px] items-center justify-between h-[150px] rounded-lg px-8">
+        <div className="flex flex-col  gap-1">
+          <h2 className="text-[18px] font-bold">{name}</h2>
           <p>{cuisines.join(" , ")}</p>
           <p>{city}</p>
-          <h4>{costForTwoMessage}</h4>
+          <h4 className="font-bold">{costForTwoMessage}</h4>
         </div>
-        <div className="menu-img">
-          <img src={imgUrl + cloudinaryImageId} alt={name} />
+        <div className="">
+          <img
+            className="w-[160px] rounded-lg h-[110px]"
+            src={imgUrl + cloudinaryImageId}
+            alt={name}
+          />
         </div>
-        <div className={`starx ${avgRatingString >= 4 ? "greenx" : "yellowx"}`}>
+        <div>
           <i className="fas fa-star"></i>
           <h4>{avgRatingString}</h4>
         </div>
       </div>
-      <h1 className="menu-head">Menu</h1>
-      <div className="menu-item">
-        <ul className="menu-list">
+      <h1 className="text-[28px] mt-4 font-bold">Menu</h1>
+      <div className="flex">
+        <ul className="flex flex-col">
           {menu.map((item) => (
-            <li className="menuu" key={item?.card?.info?.id}>
-              <div className="menu-namee">
+            <li
+              className="flex justify-between  border-b-[1px] border-black  min-h-[100px] pb-4 items-center w-[800px]  m-4"
+              key={item?.card?.info?.id}
+            >
+              <div className="max-w-[70%]">
                 <div className="namee"> {item?.card?.info?.name}</div>
                 <div className="namee-rupee">
                   {" "}
@@ -59,9 +66,17 @@ const RestroMenu = () => {
                 </div>
                 <div className="menu-desc">{item?.card?.info?.description}</div>
               </div>
-              <div className="menu-img">
-                <img src={menuImg + item?.card?.info?.imageId} alt="img" />
-                <button>ADD</button>
+              <div className="max-w-[30%] ">
+                <img
+                  className="w-[156px] h-[120px] rounded-md"
+                  src={menuImg + item?.card?.info?.imageId}
+                  alt="img"
+                />
+                <div className="flex justify-center items-center mt-[-16px]">
+                  <button className="w-[70px]  h-[30px] rounded-2xl bg-white border-2 border-black ">
+                    ADD
+                  </button>
+                </div>
               </div>
             </li>
           ))}

@@ -31,6 +31,11 @@ const Header = () => {
               Instamart
             </Link>
           </li>
+          <li>
+            <Link to="/shim" className="text-black no-underline">
+              Shimmer
+            </Link>
+          </li>
         </ul>
         <div>
           <button

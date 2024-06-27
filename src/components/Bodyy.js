@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { restaurantList, imgUrl } from "../constants/config";
-import Shimmer from "./shimmer/ShimmerCard";
+import Shimmer from "./Shimmer";
 import axios from "axios";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { Link } from "react-router-dom";

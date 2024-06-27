@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { imgUrl } from "../../constants/config";
-import Shimmer from "../shimmer/ShimmerCard";
+import { ShimmerMenu } from "../Shimmer";
 import axios from "axios";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import ShimmerMenu from "../shimmer/ShimmerMenu";
 import { menuImg } from "../../constants/config";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faIndianRupeeSign } from "@fortawesome/free-solid-svg-icons"; // FontAwesome 6 icon

@@ -41151,6 +41151,8 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _config = require("../constants/config");
+var _starRating = require("./StarRating");
+var _starRatingDefault = parcelHelpers.interopDefault(_starRating);
 const RestaurantCard = ({ name, areaName, cloudinaryImageId, avgRating, cuisines, sla })=>{
     const truncateName = (text, maxLength)=>{
         if (text.length > maxLength) return text.slice(0, maxLength) + "...";
@@ -41166,7 +41168,7 @@ const RestaurantCard = ({ name, areaName, cloudinaryImageId, avgRating, cuisines
                 alt: name
             }, void 0, false, {
                 fileName: "src/components/RestaurantCard.js",
-                lineNumber: 19,
+                lineNumber: 20,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -41177,32 +41179,18 @@ const RestaurantCard = ({ name, areaName, cloudinaryImageId, avgRating, cuisines
                         children: truncateName(name, 15)
                     }, void 0, false, {
                         fileName: "src/components/RestaurantCard.js",
-                        lineNumber: 21,
+                        lineNumber: 22,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "flex items-center",
                         children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                className: "text-green-600 font-semibold",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                    className: "fas fa-star"
-                                }, void 0, false, {
-                                    fileName: "src/components/RestaurantCard.js",
-                                    lineNumber: 26,
-                                    columnNumber: 13
-                                }, undefined)
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _starRatingDefault.default), {
+                                className: "font-semibold",
+                                avgRatingString: avgRating
                             }, void 0, false, {
                                 fileName: "src/components/RestaurantCard.js",
-                                lineNumber: 25,
-                                columnNumber: 11
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                                className: "px-2 text-base font-semibold",
-                                children: avgRating
-                            }, void 0, false, {
-                                fileName: "src/components/RestaurantCard.js",
-                                lineNumber: 28,
+                                lineNumber: 26,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -41210,13 +41198,13 @@ const RestaurantCard = ({ name, areaName, cloudinaryImageId, avgRating, cuisines
                                 children: sla.slaString
                             }, void 0, false, {
                                 fileName: "src/components/RestaurantCard.js",
-                                lineNumber: 29,
+                                lineNumber: 28,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/RestaurantCard.js",
-                        lineNumber: 24,
+                        lineNumber: 25,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -41224,7 +41212,7 @@ const RestaurantCard = ({ name, areaName, cloudinaryImageId, avgRating, cuisines
                         children: truncatedCuisines
                     }, void 0, false, {
                         fileName: "src/components/RestaurantCard.js",
-                        lineNumber: 31,
+                        lineNumber: 30,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -41232,19 +41220,19 @@ const RestaurantCard = ({ name, areaName, cloudinaryImageId, avgRating, cuisines
                         children: areaName
                     }, void 0, false, {
                         fileName: "src/components/RestaurantCard.js",
-                        lineNumber: 32,
+                        lineNumber: 31,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/RestaurantCard.js",
-                lineNumber: 20,
+                lineNumber: 21,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/RestaurantCard.js",
-        lineNumber: 18,
+        lineNumber: 19,
         columnNumber: 10
     }, undefined);
 };
@@ -41258,7 +41246,60 @@ $RefreshReg$(_c, "RestaurantCard");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","../constants/config":"gXIQ8","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"g6ZGj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","../constants/config":"gXIQ8","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./StarRating":"iDkpI"}],"iDkpI":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$c47c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$c47c.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const StarRating = ({ avgRatingString })=>{
+    const avgRating = parseFloat(avgRatingString);
+    let starColor;
+    if (avgRating > 4) starColor = "text-green-700";
+    else if (avgRating > 3) starColor = "text-yellow-500";
+    else starColor = "text-red-700";
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "flex items-center",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                className: `fas fa-star ${starColor}`
+            }, void 0, false, {
+                fileName: "src/components/StarRating.js",
+                lineNumber: 15,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                className: "ml-2 font-semibold",
+                children: avgRatingString
+            }, void 0, false, {
+                fileName: "src/components/StarRating.js",
+                lineNumber: 16,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/StarRating.js",
+        lineNumber: 14,
+        columnNumber: 10
+    }, undefined);
+};
+_c = StarRating;
+exports.default = StarRating;
+var _c;
+$RefreshReg$(_c, "StarRating");
+
+  $parcel$ReactRefreshHelpers$c47c.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"g6ZGj":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$0b04 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -41567,6 +41608,8 @@ var _reactFontawesome = require("@fortawesome/react-fontawesome");
 var _freeSolidSvgIcons = require("@fortawesome/free-solid-svg-icons"); // FontAwesome 6 icon
 var _useRestroMenu = require("../utils/useRestroMenu");
 var _useRestroMenuDefault = parcelHelpers.interopDefault(_useRestroMenu);
+var _starRating = require("../StarRating");
+var _starRatingDefault = parcelHelpers.interopDefault(_starRating);
 var _s = $RefreshSig$();
 const RestroMenu = ()=>{
     _s();
@@ -41576,7 +41619,7 @@ const RestroMenu = ()=>{
     const menu = restro?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards || [];
     return !restro ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmer.ShimmerMenu), {}, void 0, false, {
         fileName: "src/components/RestroMenu/RestroMenu.js",
-        lineNumber: 25,
+        lineNumber: 26,
         columnNumber: 20
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "flex flex-col  justify-center items-center",
@@ -41592,21 +41635,21 @@ const RestroMenu = ()=>{
                                 children: name
                             }, void 0, false, {
                                 fileName: "src/components/RestroMenu/RestroMenu.js",
-                                lineNumber: 28,
+                                lineNumber: 29,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                 children: cuisines.join(" , ")
                             }, void 0, false, {
                                 fileName: "src/components/RestroMenu/RestroMenu.js",
-                                lineNumber: 29,
+                                lineNumber: 30,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                 children: city
                             }, void 0, false, {
                                 fileName: "src/components/RestroMenu/RestroMenu.js",
-                                lineNumber: 30,
+                                lineNumber: 31,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
@@ -41614,13 +41657,13 @@ const RestroMenu = ()=>{
                                 children: costForTwoMessage
                             }, void 0, false, {
                                 fileName: "src/components/RestroMenu/RestroMenu.js",
-                                lineNumber: 31,
+                                lineNumber: 32,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/RestroMenu/RestroMenu.js",
-                        lineNumber: 27,
+                        lineNumber: 28,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -41631,40 +41674,31 @@ const RestroMenu = ()=>{
                             alt: name
                         }, void 0, false, {
                             fileName: "src/components/RestroMenu/RestroMenu.js",
-                            lineNumber: 34,
+                            lineNumber: 35,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/RestroMenu/RestroMenu.js",
-                        lineNumber: 33,
+                        lineNumber: 34,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                className: "fas fa-star"
-                            }, void 0, false, {
-                                fileName: "src/components/RestroMenu/RestroMenu.js",
-                                lineNumber: 37,
-                                columnNumber: 11
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                                children: avgRatingString
-                            }, void 0, false, {
-                                fileName: "src/components/RestroMenu/RestroMenu.js",
-                                lineNumber: 38,
-                                columnNumber: 11
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _starRatingDefault.default), {
+                            avgRatingString: avgRatingString
+                        }, void 0, false, {
+                            fileName: "src/components/RestroMenu/RestroMenu.js",
+                            lineNumber: 38,
+                            columnNumber: 11
+                        }, undefined)
+                    }, void 0, false, {
                         fileName: "src/components/RestroMenu/RestroMenu.js",
-                        lineNumber: 36,
+                        lineNumber: 37,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/RestroMenu/RestroMenu.js",
-                lineNumber: 26,
+                lineNumber: 27,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
@@ -41746,7 +41780,7 @@ const RestroMenu = ()=>{
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                             className: "flex justify-center items-center mt-[-16px]",
                                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                                className: "w-[70px]  h-[30px] rounded-2xl bg-white border-2 border-black ",
+                                                className: "w-[70px]  h-[30px] rounded-2xl bg-white border-[1px] border-black ",
                                                 children: "ADD"
                                             }, void 0, false, {
                                                 fileName: "src/components/RestroMenu/RestroMenu.js",
@@ -41783,7 +41817,7 @@ const RestroMenu = ()=>{
         ]
     }, void 0, true, {
         fileName: "src/components/RestroMenu/RestroMenu.js",
-        lineNumber: 25,
+        lineNumber: 26,
         columnNumber: 38
     }, undefined);
 };
@@ -41803,7 +41837,7 @@ $RefreshReg$(_c, "RestroMenu");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","../../constants/config":"gXIQ8","axios":"jo6P5","@fortawesome/fontawesome-free/css/all.min.css":"c1Qzz","@fortawesome/react-fontawesome":"clIT3","@fortawesome/free-solid-svg-icons":"5lkdy","../utils/useRestroMenu":"98w41","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../Shimmer":"g6ZGj"}],"c1Qzz":[function() {},{}],"clIT3":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","../../constants/config":"gXIQ8","axios":"jo6P5","@fortawesome/fontawesome-free/css/all.min.css":"c1Qzz","@fortawesome/react-fontawesome":"clIT3","@fortawesome/free-solid-svg-icons":"5lkdy","../utils/useRestroMenu":"98w41","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../Shimmer":"g6ZGj","../StarRating":"iDkpI"}],"c1Qzz":[function() {},{}],"clIT3":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "FontAwesomeIcon", ()=>FontAwesomeIcon);

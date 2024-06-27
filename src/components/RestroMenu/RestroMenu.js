@@ -8,6 +8,7 @@ import { menuImg } from "../../constants/config";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faIndianRupeeSign } from "@fortawesome/free-solid-svg-icons"; // FontAwesome 6 icon
 import useRestroMenu from "../utils/useRestroMenu";
+import StarRating from "../StarRating";
 const RestroMenu = () => {
   const { resId } = useParams();
   const restro = useRestroMenu(resId);
@@ -41,8 +42,7 @@ const RestroMenu = () => {
           />
         </div>
         <div>
-          <i className="fas fa-star"></i>
-          <h4>{avgRatingString}</h4>
+          <StarRating avgRatingString={avgRatingString} />
         </div>
       </div>
       <h1 className="text-[28px] mt-4 font-bold">Menu</h1>
@@ -72,7 +72,7 @@ const RestroMenu = () => {
                   alt="img"
                 />
                 <div className="flex justify-center items-center mt-[-16px]">
-                  <button className="w-[70px]  h-[30px] rounded-2xl bg-white border-2 border-black ">
+                  <button className="w-[70px]  h-[30px] rounded-2xl bg-white border-[1px] border-black ">
                     ADD
                   </button>
                 </div>

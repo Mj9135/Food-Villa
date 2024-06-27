@@ -1,4 +1,5 @@
 import { restaurantList, imgUrl } from "../constants/config";
+import StarRating from "./StarRating";
 const RestaurantCard = ({
   name,
   areaName,
@@ -29,10 +30,8 @@ const RestaurantCard = ({
           {truncateName(name, 15)}
         </h2>
         <div className="flex items-center">
-          <span className="text-green-600 font-semibold">
-            <i className="fas fa-star"></i>
-          </span>
-          <h3 className="px-2 text-base font-semibold">{avgRating}</h3>
+          <StarRating className="font-semibold" avgRatingString={avgRating} />
+
           <div className="px-3 text-base font-semibold">{sla.slaString}</div>
         </div>
         <div className="truncate">{truncatedCuisines}</div>

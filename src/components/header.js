@@ -5,10 +5,12 @@ const Header = () => {
   const [login, setLogin] = useState(false);
 
   return (
-    <div className="flex justify-between items-center h-20 px-4 bg-white shadow-lg">
-      <div>
-        <h1 className="text-xl font-bold">FoodCourt</h1>
-      </div>
+    <div className="flex cursor:pointer justify-between items-center h-20 px-4 bg-white shadow-lg">
+      <Link to="/">
+        <div>
+          <h1 className="text-xl font-bold">FoodCourt</h1>
+        </div>
+      </Link>
       <div className="flex gap-6">
         <ul className="flex gap-6 list-none">
           <li>

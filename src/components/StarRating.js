@@ -4,9 +4,9 @@ const StarRating = ({ avgRatingString }) => {
   const avgRating = parseFloat(avgRatingString);
   let starColor;
 
-  if (avgRating > 4) {
+  if (avgRating >= 4) {
     starColor = "text-green-700";
-  } else if (avgRating > 3) {
+  } else if (avgRating >= 3) {
     starColor = "text-yellow-500";
   } else {
     starColor = "text-red-700";

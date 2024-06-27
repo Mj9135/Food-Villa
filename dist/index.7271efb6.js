@@ -41142,7 +41142,7 @@ const RestaurantCard = ({ name, areaName, cloudinaryImageId, avgRating, cuisines
         if (text.length > maxLength) return text.slice(0, maxLength) + "...";
         else return text;
     };
-    const truncatedCuisines = cuisines.slice(0, 2).join(", ") + "...";
+    const truncatedCuisines = cuisines.slice(0, 1).join(", ") + "...";
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "w-[200px] card h-[270px] flex justify-start flex-col rounded-xl cursor-pointer p-2 pb-20 mx-[-8px] shadow-lg hover:scale-95 ease-in-out duration-100",
         children: [
@@ -41245,8 +41245,8 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 const StarRating = ({ avgRatingString })=>{
     const avgRating = parseFloat(avgRatingString);
     let starColor;
-    if (avgRating > 4) starColor = "text-green-700";
-    else if (avgRating > 3) starColor = "text-yellow-500";
+    if (avgRating >= 4) starColor = "text-green-700";
+    else if (avgRating >= 3) starColor = "text-yellow-500";
     else starColor = "text-red-700";
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "flex items-center",

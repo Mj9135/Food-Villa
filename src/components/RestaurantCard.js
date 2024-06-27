@@ -16,7 +16,7 @@ const RestaurantCard = ({
     }
   };
 
-  const truncatedCuisines = cuisines.slice(0, 2).join(", ") + "...";
+  const truncatedCuisines = cuisines.slice(0, 1).join(", ") + "...";
 
   return (
     <div className="w-[200px] card h-[270px] flex justify-start flex-col rounded-xl cursor-pointer p-2 pb-20 mx-[-8px] shadow-lg hover:scale-95 ease-in-out duration-100">

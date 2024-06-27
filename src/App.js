@@ -38,10 +38,6 @@ const appRouter = createBrowserRouter([
         path: "/contact",
         element: <Contact />,
       },
-      {
-        path: "/shim",
-        element: <ShimmerMenu />,
-      },
 
       {
         path: "/restaurants/:resId",

@@ -3037,18 +3037,10 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 }, undefined)
             },
             {
-                path: "/shim",
-                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerJs.ShimmerMenu), {}, void 0, false, {
-                    fileName: "src/App.js",
-                    lineNumber: 36,
-                    columnNumber: 14
-                }, undefined)
-            },
-            {
                 path: "/restaurants/:resId",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restroMenuDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 39,
+                    lineNumber: 36,
                     columnNumber: 14
                 }, undefined)
             },
@@ -3057,17 +3049,17 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _react.Suspense), {
                     fallback: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerJsDefault.default), {}, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 42,
+                        lineNumber: 39,
                         columnNumber: 34
                     }, void 0),
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Instamart, {}, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 43,
+                        lineNumber: 40,
                         columnNumber: 13
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 42,
+                    lineNumber: 39,
                     columnNumber: 14
                 }, undefined)
             }
@@ -3079,7 +3071,7 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterP
     router: appRouter
 }, void 0, false, {
     fileName: "src/App.js",
-    lineNumber: 48,
+    lineNumber: 45,
     columnNumber: 13
 }, undefined));
 var _c, _c1;
@@ -27433,21 +27425,6 @@ const Header = ()=>{
                                 fileName: "src/components/Header.js",
                                 lineNumber: 27,
                                 columnNumber: 11
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                                    to: "/shim",
-                                    className: "text-black no-underline",
-                                    children: "Shimmer"
-                                }, void 0, false, {
-                                    fileName: "src/components/Header.js",
-                                    lineNumber: 33,
-                                    columnNumber: 13
-                                }, undefined)
-                            }, void 0, false, {
-                                fileName: "src/components/Header.js",
-                                lineNumber: 32,
-                                columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
@@ -27462,12 +27439,12 @@ const Header = ()=>{
                             children: login ? "Logout" : "Login"
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 39,
+                            lineNumber: 34,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/Header.js",
-                        lineNumber: 38,
+                        lineNumber: 33,
                         columnNumber: 9
                     }, undefined)
                 ]

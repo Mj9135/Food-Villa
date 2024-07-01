@@ -5,8 +5,21 @@ const Section = (props) => {
   return (
     <div className="border border-black p-4 m-2">
       <h1 className="text-xl font-semibold">{props.title}</h1>
-      <button className="border border-black px-3  py-1 cursor-pointer rounded-md">
+      <button
+        className="border border-black px-3  py-1 cursor-pointer rounded-md"
+        onClick={() => {
+          setIsVisible(true);
+        }}
+      >
         Show
+      </button>
+      <button
+        className="border border-black px-3  py-1 cursor-pointer rounded-md"
+        onClick={() => {
+          setIsVisible(false);
+        }}
+      >
+        Hide
       </button>
       {isVisible && <p>{props.desc}</p>}
     </div>

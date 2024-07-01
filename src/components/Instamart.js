@@ -19,6 +19,7 @@ const Section = ({ title, desc, isVisible, setIsVisible }) => {
           Show
         </button>
       )}
+
       {isVisible && <p>{desc}</p>}
     </div>
   );

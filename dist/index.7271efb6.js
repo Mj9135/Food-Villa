@@ -34433,7 +34433,7 @@ const Body = ()=>{
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex contain flex-wrap justify-around gap-3 mt-7 px-32",
+                className: "flex contain flex-wrap justify-around gap-5 mt-7 px-56",
                 children: filteredRestaurants.map((restaurant)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                         to: "/restaurants/" + restaurant.info.id,
                         children: [
@@ -41343,7 +41343,7 @@ const Shimmer = ()=>{
 _c = Shimmer;
 const ShimmerMenu = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "flex flex-col justify-center items-center",
+        className: "flex flex-col justify-center items-center gap-5 mt-7 px-56",
         children: Array(3).fill("").map((_, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "flex bg-gray-300 mt-6 mb-6 w-[830px] animate-pulse items-center justify-between h-[150px] rounded-lg px-8",
                 children: [

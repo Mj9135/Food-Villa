@@ -20,7 +20,7 @@ const Shimmer = () => {
 
 export const ShimmerMenu = () => {
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col justify-center items-center gap-5 mt-7 px-56">
       {Array(3)
         .fill("")
         .map((_, index) => (

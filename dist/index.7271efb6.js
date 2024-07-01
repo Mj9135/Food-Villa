@@ -41704,7 +41704,7 @@ const RestroMenu = ()=>{
                                     className: "max-w-[70%]",
                                     children: [
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                            className: "namee",
+                                            className: "namee font-semibold",
                                             children: [
                                                 " ",
                                                 item?.card?.info?.name
@@ -41725,14 +41725,14 @@ const RestroMenu = ()=>{
                                                     }
                                                 }, void 0, false, {
                                                     fileName: "src/components/RestroMenu/RestroMenu.js",
-                                                    lineNumber: 49,
+                                                    lineNumber: 52,
                                                     columnNumber: 19
                                                 }, undefined),
                                                 item?.card?.info?.price / 100
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/components/RestroMenu/RestroMenu.js",
-                                            lineNumber: 47,
+                                            lineNumber: 50,
                                             columnNumber: 17
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -41740,7 +41740,7 @@ const RestroMenu = ()=>{
                                             children: item?.card?.info?.description
                                         }, void 0, false, {
                                             fileName: "src/components/RestroMenu/RestroMenu.js",
-                                            lineNumber: 54,
+                                            lineNumber: 57,
                                             columnNumber: 17
                                         }, undefined)
                                     ]
@@ -41758,7 +41758,7 @@ const RestroMenu = ()=>{
                                             alt: "img"
                                         }, void 0, false, {
                                             fileName: "src/components/RestroMenu/RestroMenu.js",
-                                            lineNumber: 57,
+                                            lineNumber: 60,
                                             columnNumber: 17
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -41768,18 +41768,18 @@ const RestroMenu = ()=>{
                                                 children: "ADD"
                                             }, void 0, false, {
                                                 fileName: "src/components/RestroMenu/RestroMenu.js",
-                                                lineNumber: 59,
+                                                lineNumber: 62,
                                                 columnNumber: 19
                                             }, undefined)
                                         }, void 0, false, {
                                             fileName: "src/components/RestroMenu/RestroMenu.js",
-                                            lineNumber: 58,
+                                            lineNumber: 61,
                                             columnNumber: 17
                                         }, undefined)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/components/RestroMenu/RestroMenu.js",
-                                    lineNumber: 56,
+                                    lineNumber: 59,
                                     columnNumber: 15
                                 }, undefined)
                             ]

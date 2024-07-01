@@ -252,6 +252,10 @@ img, video {
   margin: 1rem;
 }
 
+.m-2 {
+  margin: .5rem;
+}
+
 .mx-1 {
   margin-left: .25rem;
   margin-right: .25rem;
@@ -495,7 +499,7 @@ img, video {
   border-width: 2px;
 }
 
-.border-\[1px\] {
+.border-\[1px\], .border {
   border-width: 1px;
 }
 
@@ -529,6 +533,10 @@ img, video {
 
 .p-2 {
   padding: .5rem;
+}
+
+.p-4 {
+  padding: 1rem;
 }
 
 .px-2 {
@@ -598,6 +606,11 @@ img, video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .font-\[700\], .font-bold {

@@ -54,7 +54,10 @@ const RestroMenu = () => {
               key={item?.card?.info?.id}
             >
               <div className="max-w-[70%]">
-                <div className="namee"> {item?.card?.info?.name}</div>
+                <div className="namee font-semibold">
+                  {" "}
+                  {item?.card?.info?.name}
+                </div>
                 <div className="namee-rupee">
                   {" "}
                   <FontAwesomeIcon

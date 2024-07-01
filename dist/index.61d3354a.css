@@ -271,6 +271,11 @@ img, video {
   margin-right: 2px;
 }
 
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -325,6 +330,10 @@ img, video {
 
 .mt-\[2px\] {
   margin-top: 2px;
+}
+
+.ml-4 {
+  margin-left: 1rem;
 }
 
 .flex {

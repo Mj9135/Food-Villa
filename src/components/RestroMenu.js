@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { imgUrl } from "../../constants/config";
-import { ShimmerMenu } from "../Shimmer";
+import { imgUrl } from "../constants/config";
+import { ShimmerMenu } from "./Shimmer";
 import axios from "axios";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import { menuImg } from "../../constants/config";
+import { menuImg } from "../constants/config";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faIndianRupeeSign } from "@fortawesome/free-solid-svg-icons"; // FontAwesome 6 icon
-import useRestroMenu from "../utils/useRestroMenu";
-import StarRating from "../StarRating";
+import useRestroMenu from "./utils/useRestroMenu";
+import StarRating from "./StarRating";
 const RestroMenu = () => {
   const { resId } = useParams();
   const restro = useRestroMenu(resId);

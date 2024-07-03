@@ -2970,8 +2970,8 @@ var _error = require("./components/Error");
 var _errorDefault = parcelHelpers.interopDefault(_error);
 var _contact = require("./components/Contact");
 var _contactDefault = parcelHelpers.interopDefault(_contact);
-var _restroMenu = require("./components/RestroMenu/RestroMenu");
-var _restroMenuDefault = parcelHelpers.interopDefault(_restroMenu);
+var _restroMenuJs = require("./components/RestroMenu.js");
+var _restroMenuJsDefault = parcelHelpers.interopDefault(_restroMenuJs);
 var _shimmerJs = require("./components/Shimmer.js");
 var _shimmerJsDefault = parcelHelpers.interopDefault(_shimmerJs);
 var _userContextJs = require("./components/utils/userContext.js");
@@ -3055,7 +3055,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
             },
             {
                 path: "/restaurants/:resId",
-                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restroMenuDefault.default), {}, void 0, false, {
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restroMenuJsDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
                     lineNumber: 44,
                     columnNumber: 14
@@ -3100,7 +3100,7 @@ $RefreshReg$(_c1, "AppLayout");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-dom/client":"lOjBx","react":"21dqq","./components/Header.js":"hsJbF","./components/Bodyy.js":"ghY8R","./components/Footer":"8pPOA","react-router-dom":"9xmpe","./components/about":"adsiP","./components/Error":"kvula","./components/Contact":"cgAOG","./components/RestroMenu/RestroMenu":"04p52","45bbc3eb0b2df3bc":"3IbrY","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/Shimmer.js":"g6ZGj","./components/utils/userContext.js":"4trX7"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-dom/client":"lOjBx","react":"21dqq","./components/Header.js":"hsJbF","./components/Bodyy.js":"ghY8R","./components/Footer":"8pPOA","react-router-dom":"9xmpe","./components/about":"adsiP","./components/Error":"kvula","./components/Contact":"cgAOG","45bbc3eb0b2df3bc":"3IbrY","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/Shimmer.js":"g6ZGj","./components/utils/userContext.js":"4trX7","./components/RestroMenu.js":"kojLA"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -41673,11 +41673,114 @@ $RefreshReg$(_c, "Contact");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"04p52":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$23de = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3IbrY":[function(require,module,exports) {
+module.exports = require("d734ea4e73d9d393")(require("c631379c87e361e0").getBundleURL("aXMci") + "Instamart.0762395e.js" + "?" + Date.now()).catch((err)=>{
+    delete module.bundle.cache[module.id];
+    throw err;
+}).then(()=>module.bundle.root("gB4Fs"));
+
+},{"d734ea4e73d9d393":"61B45","c631379c87e361e0":"lgJ39"}],"61B45":[function(require,module,exports) {
+"use strict";
+var cacheLoader = require("ca2a84f7fa4a3bb0");
+module.exports = cacheLoader(function(bundle) {
+    return new Promise(function(resolve, reject) {
+        // Don't insert the same script twice (e.g. if it was already in the HTML)
+        var existingScripts = document.getElementsByTagName("script");
+        if ([].concat(existingScripts).some(function isCurrentBundle(script) {
+            return script.src === bundle;
+        })) {
+            resolve();
+            return;
+        }
+        var preloadLink = document.createElement("link");
+        preloadLink.href = bundle;
+        preloadLink.rel = "preload";
+        preloadLink.as = "script";
+        document.head.appendChild(preloadLink);
+        var script = document.createElement("script");
+        script.async = true;
+        script.type = "text/javascript";
+        script.src = bundle;
+        script.onerror = function(e) {
+            var error = new TypeError("Failed to fetch dynamically imported module: ".concat(bundle, ". Error: ").concat(e.message));
+            script.onerror = script.onload = null;
+            script.remove();
+            reject(error);
+        };
+        script.onload = function() {
+            script.onerror = script.onload = null;
+            resolve();
+        };
+        document.getElementsByTagName("head")[0].appendChild(script);
+    });
+});
+
+},{"ca2a84f7fa4a3bb0":"j49pS"}],"j49pS":[function(require,module,exports) {
+"use strict";
+var cachedBundles = {};
+var cachedPreloads = {};
+var cachedPrefetches = {};
+function getCache(type) {
+    switch(type){
+        case "preload":
+            return cachedPreloads;
+        case "prefetch":
+            return cachedPrefetches;
+        default:
+            return cachedBundles;
+    }
+}
+module.exports = function(loader, type) {
+    return function(bundle) {
+        var cache = getCache(type);
+        if (cache[bundle]) return cache[bundle];
+        return cache[bundle] = loader.apply(null, arguments).catch(function(e) {
+            delete cache[bundle];
+            throw e;
+        });
+    };
+};
+
+},{}],"lgJ39":[function(require,module,exports) {
+"use strict";
+var bundleURL = {};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return "/";
+}
+function getBaseURL(url) {
+    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
+}
+// TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
+    if (!matches) throw new Error("Origin not found");
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
+
+},{}],"kojLA":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$cc16 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$23de.prelude(module);
+$parcel$ReactRefreshHelpers$cc16.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -41686,16 +41789,16 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactRouterDom = require("react-router-dom");
-var _config = require("../../constants/config");
-var _shimmer = require("../Shimmer");
+var _config = require("../constants/config");
+var _shimmer = require("./Shimmer");
 var _axios = require("axios");
 var _axiosDefault = parcelHelpers.interopDefault(_axios);
 var _allMinCss = require("@fortawesome/fontawesome-free/css/all.min.css");
 var _reactFontawesome = require("@fortawesome/react-fontawesome");
 var _freeSolidSvgIcons = require("@fortawesome/free-solid-svg-icons"); // FontAwesome 6 icon
-var _useRestroMenu = require("../utils/useRestroMenu");
+var _useRestroMenu = require("./utils/useRestroMenu");
 var _useRestroMenuDefault = parcelHelpers.interopDefault(_useRestroMenu);
-var _starRating = require("../StarRating");
+var _starRating = require("./StarRating");
 var _starRatingDefault = parcelHelpers.interopDefault(_starRating);
 var _s = $RefreshSig$();
 const RestroMenu = ()=>{
@@ -41705,7 +41808,7 @@ const RestroMenu = ()=>{
     const { city = "", name = "", cloudinaryImageId = "", cuisines = [], costForTwoMessage = "", avgRatingString = "" } = restro?.cards?.[2]?.card?.card?.info || {};
     const menu = restro?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards || [];
     return !restro ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmer.ShimmerMenu), {}, void 0, false, {
-        fileName: "src/components/RestroMenu/RestroMenu.js",
+        fileName: "src/components/RestroMenu.js",
         lineNumber: 26,
         columnNumber: 20
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -41721,21 +41824,21 @@ const RestroMenu = ()=>{
                                 className: "text-[18px] font-bold",
                                 children: name
                             }, void 0, false, {
-                                fileName: "src/components/RestroMenu/RestroMenu.js",
+                                fileName: "src/components/RestroMenu.js",
                                 lineNumber: 29,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                 children: cuisines.join(" , ")
                             }, void 0, false, {
-                                fileName: "src/components/RestroMenu/RestroMenu.js",
+                                fileName: "src/components/RestroMenu.js",
                                 lineNumber: 30,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                 children: city
                             }, void 0, false, {
-                                fileName: "src/components/RestroMenu/RestroMenu.js",
+                                fileName: "src/components/RestroMenu.js",
                                 lineNumber: 31,
                                 columnNumber: 11
                             }, undefined),
@@ -41743,13 +41846,13 @@ const RestroMenu = ()=>{
                                 className: "font-bold",
                                 children: costForTwoMessage
                             }, void 0, false, {
-                                fileName: "src/components/RestroMenu/RestroMenu.js",
+                                fileName: "src/components/RestroMenu.js",
                                 lineNumber: 32,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
-                        fileName: "src/components/RestroMenu/RestroMenu.js",
+                        fileName: "src/components/RestroMenu.js",
                         lineNumber: 28,
                         columnNumber: 9
                     }, undefined),
@@ -41760,12 +41863,12 @@ const RestroMenu = ()=>{
                             src: (0, _config.imgUrl) + cloudinaryImageId,
                             alt: name
                         }, void 0, false, {
-                            fileName: "src/components/RestroMenu/RestroMenu.js",
+                            fileName: "src/components/RestroMenu.js",
                             lineNumber: 35,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
-                        fileName: "src/components/RestroMenu/RestroMenu.js",
+                        fileName: "src/components/RestroMenu.js",
                         lineNumber: 34,
                         columnNumber: 9
                     }, undefined),
@@ -41773,18 +41876,18 @@ const RestroMenu = ()=>{
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _starRatingDefault.default), {
                             avgRatingString: avgRatingString
                         }, void 0, false, {
-                            fileName: "src/components/RestroMenu/RestroMenu.js",
+                            fileName: "src/components/RestroMenu.js",
                             lineNumber: 38,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
-                        fileName: "src/components/RestroMenu/RestroMenu.js",
+                        fileName: "src/components/RestroMenu.js",
                         lineNumber: 37,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/RestroMenu/RestroMenu.js",
+                fileName: "src/components/RestroMenu.js",
                 lineNumber: 27,
                 columnNumber: 7
             }, undefined),
@@ -41792,7 +41895,7 @@ const RestroMenu = ()=>{
                 className: "text-[28px] mt-4 font-bold",
                 children: "Menu"
             }, void 0, false, {
-                fileName: "src/components/RestroMenu/RestroMenu.js",
+                fileName: "src/components/RestroMenu.js",
                 lineNumber: 41,
                 columnNumber: 7
             }, undefined),
@@ -41813,7 +41916,7 @@ const RestroMenu = ()=>{
                                                 item?.card?.info?.name
                                             ]
                                         }, void 0, true, {
-                                            fileName: "src/components/RestroMenu/RestroMenu.js",
+                                            fileName: "src/components/RestroMenu.js",
                                             lineNumber: 46,
                                             columnNumber: 17
                                         }, undefined),
@@ -41827,14 +41930,14 @@ const RestroMenu = ()=>{
                                                         marginRight: "0.2rem"
                                                     }
                                                 }, void 0, false, {
-                                                    fileName: "src/components/RestroMenu/RestroMenu.js",
+                                                    fileName: "src/components/RestroMenu.js",
                                                     lineNumber: 52,
                                                     columnNumber: 19
                                                 }, undefined),
                                                 item?.card?.info?.price / 100
                                             ]
                                         }, void 0, true, {
-                                            fileName: "src/components/RestroMenu/RestroMenu.js",
+                                            fileName: "src/components/RestroMenu.js",
                                             lineNumber: 50,
                                             columnNumber: 17
                                         }, undefined),
@@ -41842,13 +41945,13 @@ const RestroMenu = ()=>{
                                             className: "menu-desc",
                                             children: item?.card?.info?.description
                                         }, void 0, false, {
-                                            fileName: "src/components/RestroMenu/RestroMenu.js",
+                                            fileName: "src/components/RestroMenu.js",
                                             lineNumber: 57,
                                             columnNumber: 17
                                         }, undefined)
                                     ]
                                 }, void 0, true, {
-                                    fileName: "src/components/RestroMenu/RestroMenu.js",
+                                    fileName: "src/components/RestroMenu.js",
                                     lineNumber: 45,
                                     columnNumber: 15
                                 }, undefined),
@@ -41860,7 +41963,7 @@ const RestroMenu = ()=>{
                                             src: (0, _config.menuImg) + item?.card?.info?.imageId,
                                             alt: "img"
                                         }, void 0, false, {
-                                            fileName: "src/components/RestroMenu/RestroMenu.js",
+                                            fileName: "src/components/RestroMenu.js",
                                             lineNumber: 60,
                                             columnNumber: 17
                                         }, undefined),
@@ -41870,40 +41973,40 @@ const RestroMenu = ()=>{
                                                 className: "w-[70px]  h-[30px] rounded-2xl bg-white border-[1px] border-black ",
                                                 children: "ADD"
                                             }, void 0, false, {
-                                                fileName: "src/components/RestroMenu/RestroMenu.js",
+                                                fileName: "src/components/RestroMenu.js",
                                                 lineNumber: 62,
                                                 columnNumber: 19
                                             }, undefined)
                                         }, void 0, false, {
-                                            fileName: "src/components/RestroMenu/RestroMenu.js",
+                                            fileName: "src/components/RestroMenu.js",
                                             lineNumber: 61,
                                             columnNumber: 17
                                         }, undefined)
                                     ]
                                 }, void 0, true, {
-                                    fileName: "src/components/RestroMenu/RestroMenu.js",
+                                    fileName: "src/components/RestroMenu.js",
                                     lineNumber: 59,
                                     columnNumber: 15
                                 }, undefined)
                             ]
                         }, item?.card?.info?.id, true, {
-                            fileName: "src/components/RestroMenu/RestroMenu.js",
+                            fileName: "src/components/RestroMenu.js",
                             lineNumber: 44,
                             columnNumber: 29
                         }, undefined))
                 }, void 0, false, {
-                    fileName: "src/components/RestroMenu/RestroMenu.js",
+                    fileName: "src/components/RestroMenu.js",
                     lineNumber: 43,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
-                fileName: "src/components/RestroMenu/RestroMenu.js",
+                fileName: "src/components/RestroMenu.js",
                 lineNumber: 42,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
-        fileName: "src/components/RestroMenu/RestroMenu.js",
+        fileName: "src/components/RestroMenu.js",
         lineNumber: 26,
         columnNumber: 38
     }, undefined);
@@ -41919,12 +42022,12 @@ exports.default = RestroMenu;
 var _c;
 $RefreshReg$(_c, "RestroMenu");
 
-  $parcel$ReactRefreshHelpers$23de.postlude(module);
+  $parcel$ReactRefreshHelpers$cc16.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","../../constants/config":"gXIQ8","axios":"jo6P5","@fortawesome/fontawesome-free/css/all.min.css":"c1Qzz","@fortawesome/react-fontawesome":"clIT3","@fortawesome/free-solid-svg-icons":"5lkdy","../utils/useRestroMenu":"98w41","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../Shimmer":"g6ZGj","../StarRating":"iDkpI"}],"c1Qzz":[function() {},{}],"clIT3":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","../constants/config":"gXIQ8","./Shimmer":"g6ZGj","axios":"jo6P5","@fortawesome/fontawesome-free/css/all.min.css":"c1Qzz","@fortawesome/react-fontawesome":"clIT3","@fortawesome/free-solid-svg-icons":"5lkdy","./utils/useRestroMenu":"98w41","./StarRating":"iDkpI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"c1Qzz":[function() {},{}],"clIT3":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "FontAwesomeIcon", ()=>FontAwesomeIcon);
@@ -67339,109 +67442,6 @@ exports.default = useRestroMenu;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"21dqq","axios":"jo6P5","../../constants/api":"6kV46","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3IbrY":[function(require,module,exports) {
-module.exports = require("d734ea4e73d9d393")(require("c631379c87e361e0").getBundleURL("aXMci") + "Instamart.0762395e.js" + "?" + Date.now()).catch((err)=>{
-    delete module.bundle.cache[module.id];
-    throw err;
-}).then(()=>module.bundle.root("gB4Fs"));
-
-},{"d734ea4e73d9d393":"61B45","c631379c87e361e0":"lgJ39"}],"61B45":[function(require,module,exports) {
-"use strict";
-var cacheLoader = require("ca2a84f7fa4a3bb0");
-module.exports = cacheLoader(function(bundle) {
-    return new Promise(function(resolve, reject) {
-        // Don't insert the same script twice (e.g. if it was already in the HTML)
-        var existingScripts = document.getElementsByTagName("script");
-        if ([].concat(existingScripts).some(function isCurrentBundle(script) {
-            return script.src === bundle;
-        })) {
-            resolve();
-            return;
-        }
-        var preloadLink = document.createElement("link");
-        preloadLink.href = bundle;
-        preloadLink.rel = "preload";
-        preloadLink.as = "script";
-        document.head.appendChild(preloadLink);
-        var script = document.createElement("script");
-        script.async = true;
-        script.type = "text/javascript";
-        script.src = bundle;
-        script.onerror = function(e) {
-            var error = new TypeError("Failed to fetch dynamically imported module: ".concat(bundle, ". Error: ").concat(e.message));
-            script.onerror = script.onload = null;
-            script.remove();
-            reject(error);
-        };
-        script.onload = function() {
-            script.onerror = script.onload = null;
-            resolve();
-        };
-        document.getElementsByTagName("head")[0].appendChild(script);
-    });
-});
-
-},{"ca2a84f7fa4a3bb0":"j49pS"}],"j49pS":[function(require,module,exports) {
-"use strict";
-var cachedBundles = {};
-var cachedPreloads = {};
-var cachedPrefetches = {};
-function getCache(type) {
-    switch(type){
-        case "preload":
-            return cachedPreloads;
-        case "prefetch":
-            return cachedPrefetches;
-        default:
-            return cachedBundles;
-    }
-}
-module.exports = function(loader, type) {
-    return function(bundle) {
-        var cache = getCache(type);
-        if (cache[bundle]) return cache[bundle];
-        return cache[bundle] = loader.apply(null, arguments).catch(function(e) {
-            delete cache[bundle];
-            throw e;
-        });
-    };
-};
-
-},{}],"lgJ39":[function(require,module,exports) {
-"use strict";
-var bundleURL = {};
-function getBundleURLCached(id) {
-    var value = bundleURL[id];
-    if (!value) {
-        value = getBundleURL();
-        bundleURL[id] = value;
-    }
-    return value;
-}
-function getBundleURL() {
-    try {
-        throw new Error();
-    } catch (err) {
-        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
-        if (matches) // The first two stack frames will be this function and getBundleURLCached.
-        // Use the 3rd one, which will be a runtime in the original bundle.
-        return getBaseURL(matches[2]);
-    }
-    return "/";
-}
-function getBaseURL(url) {
-    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
-}
-// TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
-function getOrigin(url) {
-    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
-    if (!matches) throw new Error("Origin not found");
-    return matches[0];
-}
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-exports.getOrigin = getOrigin;
-
-},{}]},["9wh9R","1xC6H","2kQhy"], "2kQhy", "parcelRequiref158")
+},{"react":"21dqq","axios":"jo6P5","../../constants/api":"6kV46","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["9wh9R","1xC6H","2kQhy"], "2kQhy", "parcelRequiref158")
 
 //# sourceMappingURL=index.7271efb6.js.map

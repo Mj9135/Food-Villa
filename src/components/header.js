@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom"; // Assuming you're using React Router
-
+import userContext from "./utils/userContext";
 const Header = () => {
   const [login, setLogin] = useState(false);
-
+  const { user } = useContext(userContext);
   return (
     <div className="flex cursor:pointer justify-between items-center h-20 px-4 bg-white shadow-lg">
       <Link to="/">
@@ -13,6 +13,9 @@ const Header = () => {
       </Link>
       <div className="flex gap-6">
         <ul className="flex gap-6 list-none">
+          <h1 className="border border-black px-6 font-bold py-2">
+            {user.name}
+          </h1>
           <li>
             <Link to="/" className="text-black no-underline">
               Home

@@ -41184,7 +41184,7 @@ const RestaurantCard = ({ name, areaName, cloudinaryImageId, avgRating, cuisines
     const { user } = (0, _react.useContext)((0, _userContextDefault.default));
     const truncatedCuisines = cuisines.slice(0, 1).join(", ") + "...";
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "w-[200px] card h-[330px] flex justify-start flex-col rounded-xl cursor-pointer p-2 pb-20 mx-[-8px] shadow-lg hover:scale-95 ease-in-out duration-100",
+        className: "w-[200px] card  flex justify-start flex-col rounded-xl cursor-pointer p-2  mx-[-8px] shadow-lg hover:scale-95 ease-in-out duration-100",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                 className: "w-[200px] h-[132px] rounded-xl pt-1",

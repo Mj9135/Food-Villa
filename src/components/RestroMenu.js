@@ -6,7 +6,7 @@ import axios from "axios";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { menuImg } from "../constants/config";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faIndianRupeeSign } from "@fortawesome/free-solid-svg-icons"; // FontAwesome 6 icon
+import { faIndianRupeeSign } from "@fortawesome/free-solid-svg-icons";
 import useRestroMenu from "./utils/useRestroMenu";
 import StarRating from "./StarRating";
 const RestroMenu = () => {

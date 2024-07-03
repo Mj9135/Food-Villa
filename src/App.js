@@ -8,6 +8,7 @@ import About from "./components/about";
 import Error from "./components/Error";
 import Contact from "./components/Contact";
 import RestroMenu from "./components/RestroMenu.js";
+import ParentComponent from "./components/ParentComponent.js";
 import Shimmer from "./components/Shimmer.js";
 import { ShimmerMenu } from "./components/Shimmer.js";
 const Instamart = lazy(() => import("./components/Instamart"));
@@ -47,6 +48,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/parent",
+        element: <ParentComponent />,
       },
 
       {

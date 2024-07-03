@@ -21,6 +21,7 @@ const AppLayout = () => {
     <userContext.Provider
       value={{
         user: user,
+        setUser: setUser,
       }}
     >
       <Header />

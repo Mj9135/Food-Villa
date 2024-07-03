@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { restaurantList, imgUrl } from "../constants/config";
 import Shimmer from "./Shimmer";
 import axios from "axios";
@@ -8,8 +8,9 @@ import { filterData } from "./utils/helper";
 import useOnline from "./utils/useOnline";
 import useRestaurent from "./utils/useRestaurent";
 import RestaurantCard from "./RestaurantCard";
-
+import userContext from "./utils/userContext";
 const Body = () => {
+  const { user, setUser } = useContext(userContext);
   const [searchText, setSearchText] = useState("");
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
   const restaurants = useRestaurent();
@@ -48,6 +49,26 @@ const Body = () => {
         >
           Submit
         </button>
+        <input
+          className="border border-black p-2 ml-5"
+          value={user.name}
+          onChange={(e) => {
+            setUser({
+              ...user,
+              name: e.target.value,
+            });
+          }}
+        />
+        <input
+          className="border px-7 border-black p-2 ml-5"
+          value={user.email}
+          onChange={(e) => {
+            setUser({
+              ...user,
+              email: e.target.value,
+            });
+          }}
+        />
       </div>
       <div className="flex contain flex-wrap justify-around gap-5 mt-7 px-56">
         {filteredRestaurants.map((restaurant) => (

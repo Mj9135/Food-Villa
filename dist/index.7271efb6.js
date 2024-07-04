@@ -3051,10 +3051,18 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 }, undefined)
             },
             {
+                path: "/shimmer",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerJsDefault.default), {}, void 0, false, {
+                    fileName: "src/App.js",
+                    lineNumber: 51,
+                    columnNumber: 14
+                }, undefined)
+            },
+            {
                 path: "/parent",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _parentComponentJsDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 51,
+                    lineNumber: 54,
                     columnNumber: 14
                 }, undefined)
             },
@@ -3062,7 +3070,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/restaurants/:resId",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restroMenuJsDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 54,
+                    lineNumber: 57,
                     columnNumber: 14
                 }, undefined)
             },
@@ -3071,17 +3079,17 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _react.Suspense), {
                     fallback: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerJsDefault.default), {}, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 57,
+                        lineNumber: 60,
                         columnNumber: 34
                     }, void 0),
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Instamart, {}, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 58,
+                        lineNumber: 61,
                         columnNumber: 13
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 57,
+                    lineNumber: 60,
                     columnNumber: 14
                 }, undefined)
             }
@@ -3093,7 +3101,7 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterP
     router: appRouter
 }, void 0, false, {
     fileName: "src/App.js",
-    lineNumber: 63,
+    lineNumber: 66,
     columnNumber: 13
 }, undefined));
 var _c, _c1;
@@ -41354,9 +41362,9 @@ parcelHelpers.export(exports, "ShimmerMenu", ()=>ShimmerMenu);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 const Shimmer = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "flex contain flex-wrap justify-around gap-3 mt-7 px-32",
+        className: "flex contain flex-wrap justify-around gap-5 mt-24 px-56",
         children: Array(8).fill("").map((_, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "w-[200px] card h-[270px] bg-gray-300 flex justify-start flex-col rounded-xl cursor-pointer p-2 pb-20 mx-[-8px] shadow-lg hover:scale-95 ease-in-out duration-100",
+                className: "w-[200px] card h-[270px] bg-gray-300 flex  justify-start flex-col rounded-xl cursor-pointer mb-8 p-2 pb-20 mx-[-8px] shadow-lg hover:scale-95 ease-in-out duration-100",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "w-[180px] h-[132px] bg-gray-400 rounded-xl mt-[2px] mx-[2px] animate-pulse"

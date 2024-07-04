@@ -52,6 +52,10 @@ const appRouter = createBrowserRouter([
         element: <Contact />,
       },
       {
+        path: "/shimmer",
+        element: <Shimmer />,
+      },
+      {
         path: "/parent",
         element: <ParentComponent />,
       },

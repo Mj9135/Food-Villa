@@ -2978,56 +2978,51 @@ var _shimmerJs = require("./components/Shimmer.js");
 var _shimmerJsDefault = parcelHelpers.interopDefault(_shimmerJs);
 var _userContextJs = require("./components/utils/userContext.js");
 var _userContextJsDefault = parcelHelpers.interopDefault(_userContextJs);
-var _s = $RefreshSig$();
 const Instamart = /*#__PURE__*/ (0, _react.lazy)(()=>require("45bbc3eb0b2df3bc"));
 _c = Instamart;
 const AppLayout = ()=>{
-    _s();
-    const [user, setUser] = (0, _react.useState)({
-        name: "Mrityunjay Kumar Gupta",
-        email: "mjguptacse@gmail.com"
-    });
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userContextJsDefault.default).Provider, {
-        value: {
-            user: user,
-            setUser: setUser
-        },
+    // const [user, setUser] = useState({
+    //   name: "Mrityunjay Kumar Gupta",
+    //   email: "mjguptacse@gmail.com",
+    // });
+    return(// <userContext.Provider
+    //   value={{
+    //     user: user,
+    //     setUser: setUser,
+    //   }}
+    // >
+    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerJsDefault.default), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 25,
+                lineNumber: 29,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 26,
+                lineNumber: 30,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 27,
+                lineNumber: 31,
                 columnNumber: 7
             }, undefined)
         ]
-    }, void 0, true, {
-        fileName: "src/App.js",
-        lineNumber: 21,
-        columnNumber: 10
-    }, undefined);
+    }, void 0, true));
 };
-_s(AppLayout, "Pdl82UC8zvb5VnMq6aODCY+Z1Bw=");
 _c1 = AppLayout;
 const appRouter = (0, _reactRouterDom.createBrowserRouter)([
     {
         path: "/",
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 32,
+            lineNumber: 38,
             columnNumber: 12
         }, undefined),
         errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorDefault.default), {}, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 33,
+            lineNumber: 39,
             columnNumber: 17
         }, undefined),
         children: [
@@ -3035,7 +3030,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyyJsDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 36,
+                    lineNumber: 42,
                     columnNumber: 14
                 }, undefined)
             },
@@ -3043,7 +3038,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/about",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 39,
+                    lineNumber: 45,
                     columnNumber: 14
                 }, undefined)
             },
@@ -3051,7 +3046,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/contact",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 42,
+                    lineNumber: 48,
                     columnNumber: 14
                 }, undefined)
             },
@@ -3059,7 +3054,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/parent",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _parentComponentJsDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 45,
+                    lineNumber: 51,
                     columnNumber: 14
                 }, undefined)
             },
@@ -3067,7 +3062,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/restaurants/:resId",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restroMenuJsDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 48,
+                    lineNumber: 54,
                     columnNumber: 14
                 }, undefined)
             },
@@ -3076,17 +3071,17 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _react.Suspense), {
                     fallback: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerJsDefault.default), {}, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 51,
+                        lineNumber: 57,
                         columnNumber: 34
                     }, void 0),
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Instamart, {}, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 52,
+                        lineNumber: 58,
                         columnNumber: 13
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 51,
+                    lineNumber: 57,
                     columnNumber: 14
                 }, undefined)
             }
@@ -3098,7 +3093,7 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterP
     router: appRouter
 }, void 0, false, {
     fileName: "src/App.js",
-    lineNumber: 57,
+    lineNumber: 63,
     columnNumber: 13
 }, undefined));
 var _c, _c1;
@@ -27403,14 +27398,6 @@ const Header = ()=>{
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: "flex gap-6 list-none",
                         children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                                className: "border border-black px-6 font-bold py-2",
-                                children: user.name
-                            }, void 0, false, {
-                                fileName: "src/components/Header.js",
-                                lineNumber: 17,
-                                columnNumber: 11
-                            }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                                     to: "/",
@@ -34489,34 +34476,6 @@ const Body = ()=>{
                         fileName: "src/components/Bodyy.js",
                         lineNumber: 35,
                         columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                        className: "border border-black p-2 ml-5",
-                        value: user.name,
-                        onChange: (e)=>{
-                            setUser({
-                                ...user,
-                                name: e.target.value
-                            });
-                        }
-                    }, void 0, false, {
-                        fileName: "src/components/Bodyy.js",
-                        lineNumber: 41,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                        className: "border px-7 border-black p-2 ml-5",
-                        value: user.email,
-                        onChange: (e)=>{
-                            setUser({
-                                ...user,
-                                email: e.target.value
-                            });
-                        }
-                    }, void 0, false, {
-                        fileName: "src/components/Bodyy.js",
-                        lineNumber: 47,
-                        columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
@@ -34534,18 +34493,18 @@ const Body = ()=>{
                                 ...restaurant?.info
                             }, void 0, false, {
                                 fileName: "src/components/Bodyy.js",
-                                lineNumber: 57,
+                                lineNumber: 65,
                                 columnNumber: 13
                             }, undefined)
                         ]
                     }, restaurant?.info?.id, true, {
                         fileName: "src/components/Bodyy.js",
-                        lineNumber: 55,
+                        lineNumber: 63,
                         columnNumber: 48
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/components/Bodyy.js",
-                lineNumber: 54,
+                lineNumber: 62,
                 columnNumber: 7
             }, undefined)
         ]
@@ -41303,20 +41262,6 @@ const RestaurantCard = ({ name, areaName, cloudinaryImageId, avgRating, cuisines
                     }, void 0, false, {
                         fileName: "src/components/RestaurantCard.js",
                         lineNumber: 36,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                        children: user.name
-                    }, void 0, false, {
-                        fileName: "src/components/RestaurantCard.js",
-                        lineNumber: 37,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                        children: user.email
-                    }, void 0, false, {
-                        fileName: "src/components/RestaurantCard.js",
-                        lineNumber: 38,
                         columnNumber: 9
                     }, undefined)
                 ]

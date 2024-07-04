@@ -49,7 +49,7 @@ const Body = () => {
         >
           Submit
         </button>
-        <input
+        {/* <input
           className="border border-black p-2 ml-5"
           value={user.name}
           onChange={(e) => {
@@ -68,7 +68,7 @@ const Body = () => {
               email: e.target.value,
             });
           }}
-        />
+        /> */}
       </div>
       <div className="flex contain flex-wrap justify-around gap-5 mt-7 px-56">
         {filteredRestaurants.map((restaurant) => (

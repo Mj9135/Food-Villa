@@ -13,9 +13,9 @@ const Header = () => {
       </Link>
       <div className="flex gap-6">
         <ul className="flex gap-6 list-none">
-          <h1 className="border border-black px-6 font-bold py-2">
+          {/* <h1 className="border border-black px-6 font-bold py-2">
             {user.name}
-          </h1>
+          </h1> */}
           <li>
             <Link to="/" className="text-black no-underline">
               Home

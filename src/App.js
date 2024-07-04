@@ -14,21 +14,23 @@ import { ShimmerMenu } from "./components/Shimmer.js";
 const Instamart = lazy(() => import("./components/Instamart"));
 import userContext from "./components/utils/userContext.js";
 const AppLayout = () => {
-  const [user, setUser] = useState({
-    name: "Mrityunjay Kumar Gupta",
-    email: "mjguptacse@gmail.com",
-  });
+  // const [user, setUser] = useState({
+  //   name: "Mrityunjay Kumar Gupta",
+  //   email: "mjguptacse@gmail.com",
+  // });
   return (
-    <userContext.Provider
-      value={{
-        user: user,
-        setUser: setUser,
-      }}
-    >
+    // <userContext.Provider
+    //   value={{
+    //     user: user,
+    //     setUser: setUser,
+    //   }}
+    // >
+    <>
       <Header />
       <Outlet />
       <Footer />
-    </userContext.Provider>
+    </>
+    // </userContext.Provider>
   );
 };
 const appRouter = createBrowserRouter([

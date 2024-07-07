@@ -8,7 +8,7 @@ const Header = () => {
     <div className="flex cursor:pointer justify-between items-center h-20 px-4 bg-white shadow-lg">
       <Link to="/">
         <div>
-          <h1 className="text-xl color  font-bold">FoodCourt</h1>
+          <h1 className="text-xl   font-bold">FoodCourt</h1>
         </div>
       </Link>
       <div className="flex gap-6">

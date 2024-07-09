@@ -11,7 +11,7 @@ const Header = () => {
           <h1 className="text-xl   font-bold">FoodCourt</h1>
         </div>
       </Link>
-      <div className="flex gap-6">
+      <div className="flex COLOR gap-6">
         <ul className="flex gap-6 list-none">
           {/* <h1 className="border border-black px-6 font-bold py-2">
             {user.name}

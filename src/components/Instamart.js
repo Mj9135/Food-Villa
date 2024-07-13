@@ -13,7 +13,7 @@ const Section = ({ title, desc, isVisible, toggleVisibility }) => {
         </button>
       ) : (
         <button
-          className="border border px-3 mt-4 py-1 cursor-pointer rounded-md"
+          className="border border-black ccc px-3 mt-4 py-1 cursor-pointer rounded-md"
           onClick={toggleVisibility}
         >
           Show

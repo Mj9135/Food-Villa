@@ -1,7 +1,7 @@
 import { useEffect, useState, useContext } from "react";
 import { restaurantList, imgUrl } from "../constants/config";
 import Shimmer from "./Shimmer";
-import axios from "axios";
+
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { Link } from "react-router-dom";
 import { filterData } from "./utils/helper";
@@ -71,7 +71,7 @@ const Body = () => {
         /> */}
       </div>
       <div className="flex contain min-h-[565px] flex-wrap items-start justify-center gap-8 pt-7 px-4 md:px-11 md:pb-8 bg-gray-100">
-        {filteredRestaurants.map((restaurant) => (
+        {filteredRestaurants?.map((restaurant) => (
           <Link
             to={"/restaurants/" + restaurant.info.id}
             key={restaurant?.info?.id}

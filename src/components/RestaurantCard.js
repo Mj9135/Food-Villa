@@ -21,20 +21,22 @@ const RestaurantCard = ({
   const truncatedCuisines = cuisines.slice(0, 1).join(", ") + "...";
 
   return (
-    <div className="w-[200px] card  flex justify-start flex-col rounded-xl cursor-pointer p-2  mx-[-8px] shadow-lg hover:scale-95 ease-in-out duration-100">
+    <div className="w-[250px] card  flex bg-white justify-start flex-col rounded-xl cursor-pointer p-2  mx-[-8px] shadow-lg hover:scale-95 ease-in-out duration-100">
       <img
-        className="w-[200px] h-[132px] rounded-xl pt-1"
+        className="w-[250px] h-[160px] rounded-xl pt-1"
         src={imgUrl + cloudinaryImageId}
         alt={name}
       />
       <div className="flex mt-1 flex-col p-1 px-2 gap-1 justify-start items-start">
         <h2 className="text-[18px] font-[700] truncate">
-          {truncateName(name, 15)}
+          {truncateName(name, 20)}
         </h2>
         <div className="flex items-center">
           <StarRating className="font-semibold" avgRatingString={avgRating} />
 
-          <div className="px-3 text-base font-semibold">{sla.slaString}</div>
+          <div className="px-3 ml-16 text-base font-semibold">
+            {sla.slaString}
+          </div>
         </div>
         <div className="truncate">{truncatedCuisines}</div>
         <div className="cost">{areaName}</div>

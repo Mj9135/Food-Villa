@@ -34458,7 +34458,7 @@ const Body = ()=>{
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "search-container flex mb-10 justify-center items-center mt-10 ",
+                className: "search-container bg-gray-100  flex pb-10 justify-center items-center pt-10 ",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                         type: "text",
@@ -34492,7 +34492,7 @@ const Body = ()=>{
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex contain flex-wrap items-center justify-center gap-10 mt-7 px-20",
+                className: "flex contain flex-wrap items-center justify-center gap-8 pt-7 px-11 bg-gray-100",
                 children: filteredRestaurants.map((restaurant)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                         to: "/restaurants/" + restaurant.info.id,
                         children: [
@@ -41209,10 +41209,10 @@ const RestaurantCard = ({ name, areaName, cloudinaryImageId, avgRating, cuisines
     const { user } = (0, _react.useContext)((0, _userContextDefault.default));
     const truncatedCuisines = cuisines.slice(0, 1).join(", ") + "...";
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "w-[200px] card  flex justify-start flex-col rounded-xl cursor-pointer p-2  mx-[-8px] shadow-lg hover:scale-95 ease-in-out duration-100",
+        className: "w-[250px] card  flex bg-white justify-start flex-col rounded-xl cursor-pointer p-2  mx-[-8px] shadow-lg hover:scale-95 ease-in-out duration-100",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                className: "w-[200px] h-[132px] rounded-xl pt-1",
+                className: "w-[250px] h-[160px] rounded-xl pt-1",
                 src: (0, _config.imgUrl) + cloudinaryImageId,
                 alt: name
             }, void 0, false, {
@@ -41225,7 +41225,7 @@ const RestaurantCard = ({ name, areaName, cloudinaryImageId, avgRating, cuisines
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                         className: "text-[18px] font-[700] truncate",
-                        children: truncateName(name, 15)
+                        children: truncateName(name, 20)
                     }, void 0, false, {
                         fileName: "src/components/RestaurantCard.js",
                         lineNumber: 27,
@@ -41243,7 +41243,7 @@ const RestaurantCard = ({ name, areaName, cloudinaryImageId, avgRating, cuisines
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "px-3 text-base font-semibold",
+                                className: "px-3 ml-16 text-base font-semibold",
                                 children: sla.slaString
                             }, void 0, false, {
                                 fileName: "src/components/RestaurantCard.js",
@@ -41261,7 +41261,7 @@ const RestaurantCard = ({ name, areaName, cloudinaryImageId, avgRating, cuisines
                         children: truncatedCuisines
                     }, void 0, false, {
                         fileName: "src/components/RestaurantCard.js",
-                        lineNumber: 35,
+                        lineNumber: 37,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -41269,7 +41269,7 @@ const RestaurantCard = ({ name, areaName, cloudinaryImageId, avgRating, cuisines
                         children: areaName
                     }, void 0, false, {
                         fileName: "src/components/RestaurantCard.js",
-                        lineNumber: 36,
+                        lineNumber: 38,
                         columnNumber: 9
                     }, undefined)
                 ]
@@ -41362,12 +41362,12 @@ parcelHelpers.export(exports, "ShimmerMenu", ()=>ShimmerMenu);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 const Shimmer = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "flex contain flex-wrap justify-around gap-5 mt-24 px-56",
-        children: Array(8).fill("").map((_, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "w-[200px] card h-[270px] bg-gray-300 flex  justify-start flex-col rounded-xl cursor-pointer mb-8 p-2 pb-20 mx-[-8px] shadow-lg hover:scale-95 ease-in-out duration-100",
+        className: "flex contain flex-wrap justify-around gap-8 mt-24 px-11",
+        children: Array(15).fill("").map((_, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "w-[250px] card h-[290px] bg-gray-300 flex  justify-start flex-col rounded-xl cursor-pointer mb-8 p-2 pb-20 mx-[-8px] shadow-lg hover:scale-95 ease-in-out duration-100",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "w-[180px] h-[132px] bg-gray-400 rounded-xl mt-[2px] mx-[2px] animate-pulse"
+                        className: "w-[230px] h-[180px] bg-gray-400 rounded-xl mt-[2px] mx-[2px] animate-pulse"
                     }, void 0, false, {
                         fileName: "src/components/Shimmer.js",
                         lineNumber: 4,
@@ -41398,7 +41398,7 @@ const Shimmer = ()=>{
             }, index, true, {
                 fileName: "src/components/Shimmer.js",
                 lineNumber: 3,
-                columnNumber: 44
+                columnNumber: 45
             }, undefined))
     }, void 0, false, {
         fileName: "src/components/Shimmer.js",

@@ -1,14 +1,14 @@
 const Shimmer = () => {
   return (
-    <div className="flex contain flex-wrap justify-around gap-5 mt-24 px-56">
-      {Array(8)
+    <div className="flex contain flex-wrap justify-around gap-8 mt-24 px-11">
+      {Array(15)
         .fill("")
         .map((_, index) => (
           <div
             key={index}
-            className="w-[200px] card h-[270px] bg-gray-300 flex  justify-start flex-col rounded-xl cursor-pointer mb-8 p-2 pb-20 mx-[-8px] shadow-lg hover:scale-95 ease-in-out duration-100"
+            className="w-[250px] card h-[290px] bg-gray-300 flex  justify-start flex-col rounded-xl cursor-pointer mb-8 p-2 pb-20 mx-[-8px] shadow-lg hover:scale-95 ease-in-out duration-100"
           >
-            <div className="w-[180px] h-[132px] bg-gray-400 rounded-xl mt-[2px] mx-[2px] animate-pulse"></div>
+            <div className="w-[230px] h-[180px] bg-gray-400 rounded-xl mt-[2px] mx-[2px] animate-pulse"></div>
             <div className="flex flex-col mx-1 py-2 gap-1 rounded-md pt-4 mt-3 justify-start animate-pulse items-start bg-gray-400"></div>
             <div className="flex flex-col mr-20 ml-1 py-1 gap-1 rounded-md pt-4 mt-3 justify-start animate-pulse items-start bg-gray-400"></div>
             <div className="flex flex-col mx-1 py-2 gap-1 rounded-md pt-4 mt-3 mb-[-50px] justify-start items-start animate-pulse bg-gray-400"></div>

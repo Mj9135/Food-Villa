@@ -27383,7 +27383,7 @@ const Header = ()=>{
                 to: "/",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                        className: "text-xl font-bold",
+                        className: "text-xl   font-bold",
                         children: "FoodCourt"
                     }, void 0, false, {
                         fileName: "src/components/Header.js",
@@ -27401,7 +27401,7 @@ const Header = ()=>{
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex gap-6",
+                className: "flex  gap-6",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: "flex gap-6 list-none",
@@ -34458,12 +34458,12 @@ const Body = ()=>{
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "search-container",
+                className: "search-container flex mb-10 justify-center items-center mt-10 ",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                         type: "text",
-                        placeholder: "Search",
-                        className: "search",
+                        placeholder: "Search a restaurent you want... ",
+                        className: "search w-96 p-2  border-gray-500 border-r-0 border outline-none ",
                         value: searchText,
                         onChange: (e)=>{
                             setSearchText(e.target.value);
@@ -34478,8 +34478,8 @@ const Body = ()=>{
                             const data = (0, _helper.filterData)(searchText, restaurants);
                             setFilteredRestaurants(data);
                         },
-                        className: "mt-10",
-                        children: "Submit"
+                        className: " px-5 hover:bg-green-800 hover:border-green-800  rounded-r-md ease-in-out duration-150 border-[#c27100]  border  cursor-pointer bg-[#c26100] p-2 text-white",
+                        children: "Search"
                     }, void 0, false, {
                         fileName: "src/components/Bodyy.js",
                         lineNumber: 35,

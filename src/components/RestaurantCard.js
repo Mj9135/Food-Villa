@@ -21,9 +21,9 @@ const RestaurantCard = ({
   const truncatedCuisines = cuisines.slice(0, 1).join(", ") + "...";
 
   return (
-    <div className="w-[250px] card  flex bg-white justify-start flex-col rounded-xl cursor-pointer p-2  mx-[-8px] shadow-lg hover:scale-95 ease-in-out duration-100">
+    <div className="md:w-[250px] w-[260px] card  flex bg-white justify-start flex-col rounded-xl cursor-pointer p-2  mx-[-8px] shadow-lg hover:scale-95 ease-in-out duration-100">
       <img
-        className="w-[250px] h-[160px] rounded-xl pt-1"
+        className="md:w-[250px] md:h-[160px] w-[260px] h-[180px] rounded-xl pt-1"
         src={imgUrl + cloudinaryImageId}
         alt={name}
       />

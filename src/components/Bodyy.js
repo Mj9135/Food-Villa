@@ -30,11 +30,11 @@ const Body = () => {
     <Shimmer />
   ) : (
     <>
-      <div className="search-container bg-gray-100  flex pb-10 justify-center items-center pt-10 ">
+      <div className="search-container bg-gray-100  flex md:pb-8 md:pt-8 sm:pb-8 sm:pt-8 justify-center items-center pt-6 ">
         <input
           type="text"
           placeholder="Search a restaurent you want... "
-          className="search w-96 p-2  border-gray-500 border-r-0 border outline-none "
+          className="search w-40 sm:w-96 md:w-96 p-2  border-gray-500 border-r-0 border outline-none "
           value={searchText}
           onChange={(e) => {
             setSearchText(e.target.value);
@@ -70,7 +70,7 @@ const Body = () => {
           }}
         /> */}
       </div>
-      <div className="flex contain min-h-[565px] flex-wrap items-start justify-center gap-8 pt-7 px-11 bg-gray-100">
+      <div className="flex contain min-h-[565px] flex-wrap items-start justify-center gap-8 pt-7 px-4 md:px-11 md:pb-8 bg-gray-100">
         {filteredRestaurants.map((restaurant) => (
           <Link
             to={"/restaurants/" + restaurant.info.id}

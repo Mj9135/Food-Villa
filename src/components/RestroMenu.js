@@ -60,7 +60,7 @@ const RestroMenu = () => {
     <ShimmerMenu />
   ) : (
     <div className="flex flex-col justify-center items-center">
-      <div className="flex shadow-2xl w-[830px] items-center justify-between h-[150px] rounded-lg px-8">
+      <div className="flex shadow-2xl w-full md:w-[830px] items-center justify-between h-[150px] rounded-lg px-8">
         <div className="flex flex-col gap-1">
           <h2 className="text-[18px] font-bold">{name}</h2>
           <p>{cuisines.join(" , ")}</p>
@@ -69,12 +69,12 @@ const RestroMenu = () => {
         </div>
         <div className="">
           <img
-            className="w-[160px] rounded-lg h-[110px]"
+            className="md:w-[160px] w-[140px]   md:block rounded-lg h-[110px]"
             src={imgUrl + cloudinaryImageId}
             alt={name}
           />
         </div>
-        <div>
+        <div className="md:block hidden">
           <StarRating avgRatingString={avgRatingString} />
         </div>
       </div>
@@ -83,10 +83,10 @@ const RestroMenu = () => {
         <ul className="flex flex-col">
           {menu.map((item) => (
             <li
-              className="flex justify-between border-b-[1px]  border-black min-h-[100px] pb-6 items-center w-[800px] m-4"
+              className="flex justify-between border-b-[1px]  border-black min-h-[100px] pb-6 items-center md:w-[800px] m-4"
               key={item?.card?.info?.id}
             >
-              <div className="max-w-[70%]">
+              <div className=" max-w-[55%] md:max-w-[70%]">
                 <div className="namee font-semibold">
                   {item?.card?.info?.name}
                 </div>
@@ -99,9 +99,9 @@ const RestroMenu = () => {
                 </div>
                 <div className="menu-desc">{item?.card?.info?.description}</div>
               </div>
-              <div className="max-w-[30%]">
+              <div className="max-w-[50%]">
                 <img
-                  className="w-[156px] h-[120px] rounded-md"
+                  className="md:w-[156px] md:h-[120px] w-[130px] h-[100px] rounded-md"
                   src={menuImg + item?.card?.info?.imageId}
                   alt="img"
                 />

@@ -70,7 +70,7 @@ const Body = () => {
           }}
         /> */}
       </div>
-      <div className="flex contain flex-wrap items-center justify-center gap-8 pt-7 px-11 bg-gray-100">
+      <div className="flex contain min-h-[565px] flex-wrap items-start justify-center gap-8 pt-7 px-11 bg-gray-100">
         {filteredRestaurants.map((restaurant) => (
           <Link
             to={"/restaurants/" + restaurant.info.id}

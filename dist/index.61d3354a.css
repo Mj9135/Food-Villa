@@ -415,8 +415,36 @@ img, video {
   height: 180px;
 }
 
+.h-\[100vh\] {
+  height: 100vh;
+}
+
 .min-h-\[100px\] {
   min-height: 100px;
+}
+
+.min-h-\[1000px\] {
+  min-height: 1000px;
+}
+
+.min-h-\[600px\] {
+  min-height: 600px;
+}
+
+.min-h-\[500px\] {
+  min-height: 500px;
+}
+
+.min-h-\[580px\] {
+  min-height: 580px;
+}
+
+.min-h-\[570px\] {
+  min-height: 570px;
+}
+
+.min-h-\[565px\] {
+  min-height: 565px;
 }
 
 .w-40 {

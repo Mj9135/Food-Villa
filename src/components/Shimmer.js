@@ -20,20 +20,20 @@ const Shimmer = () => {
 
 export const ShimmerMenu = () => {
   return (
-    <div className="flex flex-col justify-center items-center gap-5 mt-7 px-56">
-      {Array(3)
+    <div className="flex flex-col justify-center items-center px-6 md:gap-5 md:mt-7 md:px-56">
+      {Array(9)
         .fill("")
         .map((_, index) => (
           <div
             key={index}
-            className="flex bg-gray-300 mt-6 mb-6 w-[830px] animate-pulse items-center justify-between h-[150px] rounded-lg px-8"
+            className="flex bg-gray-300 w-full mt-4 md:mt-6 px-4  md:mb-6 md:w-[830px] animate-pulse items-center justify-between h-[150px] rounded-lg md:px-8"
           >
             <div className="flex flex-col gap-1">
-              <div className="w-80 h-6 mb-4 rounded-lg  animate-pulse bg-gray-400"></div>
-              <div className="w-40 h-6 animate-pulse mb-4 rounded-lg bg-gray-400"></div>
-              <div className="w-80 h-6 animate-pulse bg-gray-400 rounded-lg"></div>
+              <div className="w-[140px] h-4 md:w-80 md:h-6 mb-4 rounded-lg  animate-pulse bg-gray-400"></div>
+              <div className="w-[100px] h-4 md:w-40 md:h-6 animate-pulse mb-4 rounded-lg bg-gray-400"></div>
+              <div className="w-[140px] h-4 md:w-80 md:h-6 animate-pulse bg-gray-400 rounded-lg"></div>
             </div>
-            <div className="w-[160px] animate-pulse rounded-lg h-[110px] bg-gray-400"></div>
+            <div className="w-[100px] h-[100px] md:w-[160px] animate-pulse rounded-lg md:h-[110px] bg-gray-400"></div>
           </div>
         ))}
     </div>

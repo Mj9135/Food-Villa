@@ -7,6 +7,7 @@ import Cart from "../cart";
 import RestroMenu from "../RestroMenu";
 import AppLayout from "../AppLayout";
 import Shimmer from "../Shimmer";
+import { ShimmerMenu } from "../Shimmer";
 import InstaMart from "../Instamart";
 import ThankYou from "../ThankYou";
 
@@ -38,6 +39,10 @@ const useRoute = () => {
         {
           path: "/cart",
           element: <Cart />,
+        },
+        {
+          path: "/shimmer",
+          element: <ShimmerMenu />,
         },
         {
           path: "/thankyou",

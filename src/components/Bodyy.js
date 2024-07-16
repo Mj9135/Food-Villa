@@ -34,7 +34,7 @@ const Body = () => {
         <input
           type="text"
           placeholder="Search a restaurent you want... "
-          className="search w-40 sm:w-96 md:w-96 p-2  border-gray-500 border-r-0 border outline-none "
+          className="search w-40 sm:w-96 md:w-96 p-2   border-gray-500 border-r-0 border outline-none "
           value={searchText}
           onChange={(e) => {
             setSearchText(e.target.value);
@@ -45,7 +45,7 @@ const Body = () => {
             const data = filterData(searchText, restaurants);
             setFilteredRestaurants(data);
           }}
-          className=" px-5 hover:bg-green-800 hover:border-green-800  rounded-r-md ease-in-out duration-150 border-[#c27100]  border  cursor-pointer bg-[#c26100] p-2 text-white"
+          className=" px-5 hover:bg-green-800 hover:border-green-800  rounded-r-md ease-in-out duration-150 border-[#c27100]  border  cursor-pointer bg-orange-400 p-2 text-white"
         >
           Search
         </button>
@@ -70,7 +70,7 @@ const Body = () => {
           }}
         /> */}
       </div>
-      <div className="flex contain min-h-[565px] flex-wrap items-start justify-center gap-8 pt-7 px-4 md:px-11 md:pb-8 bg-gray-100">
+      <div className="flex contain min-h-[565px] pb-24 flex-wrap items-start justify-center gap-8 pt-7 px-4 md:px-11 md:pb-8 bg-gray-100">
         {filteredRestaurants?.map((restaurant) => (
           <Link
             to={"/restaurants/" + restaurant.info.id}

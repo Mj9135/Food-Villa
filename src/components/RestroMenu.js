@@ -61,7 +61,7 @@ const RestroMenu = () => {
   ) : (
     <div className="flex flex-col justify-center items-center">
       <div className="flex py-4 shadow-2xl w-full md:w-[830px] gap-4 items-center justify-between md:h-[150px] rounded-lg px-8">
-        <div className="flex flex-col w-[60%] gap-2">
+        <div className="flex flex-col w-[60%] gap-2 pt-4">
           <h2 className="text-[18px] font-bold">{name}</h2>
           <p>{cuisines.join(" , ")}</p>
           <p>{city}</p>

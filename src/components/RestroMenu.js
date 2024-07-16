@@ -60,16 +60,16 @@ const RestroMenu = () => {
     <ShimmerMenu />
   ) : (
     <div className="flex flex-col justify-center items-center">
-      <div className="flex shadow-2xl w-full md:w-[830px] items-center justify-between h-[150px] rounded-lg px-8">
-        <div className="flex flex-col gap-1">
+      <div className="flex py-4 shadow-2xl w-full md:w-[830px] gap-4 items-center justify-between md:h-[150px] rounded-lg px-8">
+        <div className="flex flex-col w-[60%] gap-2">
           <h2 className="text-[18px] font-bold">{name}</h2>
           <p>{cuisines.join(" , ")}</p>
           <p>{city}</p>
           <h4 className="font-bold">{costForTwoMessage}</h4>
         </div>
-        <div className="">
+        <div className="w-[50%]">
           <img
-            className="md:w-[160px] w-[140px]   md:block rounded-lg h-[110px]"
+            className="md:w-[160px] w-[150px] md:block rounded-lg h-[110px]"
             src={imgUrl + cloudinaryImageId}
             alt={name}
           />
@@ -86,7 +86,7 @@ const RestroMenu = () => {
               className="flex justify-between border-b-[1px]  border-black min-h-[100px] pb-6 items-center md:w-[800px] m-4"
               key={item?.card?.info?.id}
             >
-              <div className=" max-w-[55%] md:max-w-[70%]">
+              <div className=" max-w-[55%] md:max-w-[70%] h-[120px] overflow-hidden">
                 <div className="namee font-semibold">
                   {item?.card?.info?.name}
                 </div>

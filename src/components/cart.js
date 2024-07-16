@@ -13,7 +13,7 @@ function Cart() {
 
   if (cartItemsValue.length === 0) {
     return (
-      <div className="m-4 p-4 text-center mt-52 md:my-20">
+      <div className="m-4 p-4 text-center h-[580px] md:h-[400px] md:mt-52 md:my-20">
         <h1 className="text-2xl font-bold text-gray-700">Your cart is empty</h1>
         <p className="text-gray-500 my-4">
           You can go to home page to view more restaurants
@@ -26,7 +26,7 @@ function Cart() {
   }
 
   return (
-    <div className=" w-[350px] md:w-11/12 md:mx-20 md:mt-52 md:my-4 flex flex-col md:flex-row justify-between items-center relative">
+    <div className=" w-[350px] md:w-11/12 md:mx-20  md:my-4 flex flex-col md:flex-row justify-between items-center relative">
       <div className="md:m-4 md:w-10/12 w-[350px] ">
         <div className="">
           <MenuItemsList data={cartItemsValue} />

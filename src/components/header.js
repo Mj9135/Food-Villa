@@ -46,7 +46,7 @@ const Header = () => {
           <Link to="/cart">
             <li className="md:px-3 md:py-2 pt-3  text-gray-700 relative text-2xl">
               <FontAwesomeIcon icon={faCartShopping} />
-              <span className="absolute text-sm font-bold mr-[312px] md:z-10 md:mr-[12px] z-[-1] text-white bg-orange-500 px-1 right-1 md:top-[-5px] top-[-2px] rounded-full">
+              <span className="absolute text-sm font-bold left-1 md:ml-[14px] ml-1 md:z-10 md:mr-[12px] z-[-1] text-white bg-orange-500 px-1 md:top-[-5px] top-[-2px] rounded-full">
                 {cartItems.length}
               </span>
             </li>

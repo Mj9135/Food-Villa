@@ -3,7 +3,7 @@ import { restaurantList, imgUrl } from "../constants/config";
 import Shimmer from "./Shimmer";
 
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { filterData } from "./utils/helper";
 import useOnline from "./utils/useOnline";
 import useRestaurent from "./utils/useRestaurent";
@@ -21,10 +21,29 @@ const Body = () => {
   if (!isOnline) {
     return <h1>Please Check Your Internet Connection</h1>;
   }
+  const navigate = useNavigate();
+
+  const handleResetSearch = () => {
+    setSearchText(""); // Reset the search text
+    navigate("/"); // Navigate to the home page
+    setFilteredRestaurants(restaurants);
+  };
   //Early return
   if (!restaurants) return null;
   if (filteredRestaurants?.length === 0 && searchText)
-    return <h1>No Results Found</h1>;
+    return (
+      <div className="m-4 p-4 text-center  md:h-[400px] md:mt-20 md:my-20">
+        <h1 className="text-2xl font-bold text-gray-700">
+          Your Search have no any results...
+        </h1>
+        <button
+          onClick={handleResetSearch}
+          className="my-4 p-2 rounded-md bg-orange-400 hover:bg-orange-600/85 text-white font-bold shadow-lgs"
+        >
+          <Link to="/">Go To Home</Link>
+        </button>
+      </div>
+    );
 
   return restaurants && restaurants.length === 0 ? (
     <Shimmer />
@@ -49,26 +68,6 @@ const Body = () => {
         >
           Search
         </button>
-        {/* <input
-          className="border border-black p-2 ml-5"
-          value={user.name}
-          onChange={(e) => {
-            setUser({
-              ...user,
-              name: e.target.value,
-            });
-          }}
-        />
-        <input
-          className="border px-7 border-black p-2 ml-5"
-          value={user.email}
-          onChange={(e) => {
-            setUser({
-              ...user,
-              email: e.target.value,
-            });
-          }}
-        /> */}
       </div>
       <div className="flex contain min-h-[565px] pb-24 flex-wrap items-start justify-center gap-8 pt-7 px-4 md:px-11 md:pb-8 bg-gray-100">
         {filteredRestaurants?.map((restaurant) => (

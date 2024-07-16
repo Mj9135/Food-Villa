@@ -13,7 +13,7 @@ function Cart() {
 
   if (cartItemsValue.length === 0) {
     return (
-      <div className="m-4 p-4 text-center h-[580px] md:h-[400px] md:mt-52 md:my-20">
+      <div className="m-4 p-4 text-center  md:h-[400px] md:mt-52 md:my-20">
         <h1 className="text-2xl font-bold text-gray-700">Your cart is empty</h1>
         <p className="text-gray-500 my-4">
           You can go to home page to view more restaurants

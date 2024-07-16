@@ -10,11 +10,11 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white py-8 px-4">
+    <footer className="bg-gray-800 text-white py-8 px-4 mt-4">
       <div className="container mx-auto flex flex-col md:flex-row md:justify-between md:items-center">
         <div className="mb-4 md:mb-4">
           <h1 className="text-2xl font-bold text-center md:text-left">
-            Tatanagar Bites
+            Tatanagar Treats
           </h1>
           <p className="text-gray-400 text-center pt-4 md:mt-4">
             Your Premier Online Food Ordering Destination in Jamshedpur
@@ -36,7 +36,7 @@ const Footer = () => {
         </div>
         <div className="mb-4 md:mb-0 flex justify-center md:justify-normal md:items-start text-center md:text-left items-center flex-col gap-3">
           <h2 className="text-xl font-semibold">Contact Us</h2>
-          <p className="text-gray-400">support@tatanagarbites.com</p>
+          <p className="text-gray-400">support@tatanagartreats.com</p>
           <p className="text-gray-400">+91-9135407413</p>
           <p className="text-gray-400 text-center">
             123 Food Street, Jamshedpur, Jharkhand, India
@@ -78,7 +78,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="container mx-auto text-center text-gray-400 mt-4">
-        &copy; 2024 Tatanagar Bites. All Rights Reserved.
+        &copy; 2024 Tatanagar Treats. All Rights Reserved.
       </div>
     </footer>
   );

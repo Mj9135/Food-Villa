@@ -51,7 +51,7 @@ function Cart() {
                 ) / 100}{" "}
               </p>
             </div>
-            <div className="mt-4 mb-2 flex justify-between items-center gap-8">
+            <div className="mt-4 mb-2 flex justify-between items-center gap-8 ">
               <button
                 className="relative md:px-4 w-[150px] md:w-[200px]  md:h-10 border-2 my-6 border-green-500 border-collapse text-black font-bold overflow-hidden bg-white rounded-lg transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-white hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-green-500 before:to-green-300 before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-md hover:before:left-0"
                 onClick={handleClearCart}

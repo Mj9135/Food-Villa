@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start": "parcel public/index.html",
-    "build": "parcel build index.html",
+    "build": "parcel build public/index.html",
     "test": "jest"
   },
   "keywords": [],
@@ -26,6 +26,7 @@
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@reduxjs/toolkit": "^2.2.6",
     "axios": "^1.7.2",
+    "firebase": "^10.12.3",
     "formik": "^2.4.6",
     "lucide-react": "^0.408.0",
     "mdb-react-ui-kit": "^8.0.0",

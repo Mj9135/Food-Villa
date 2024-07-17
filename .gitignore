@@ -20,3 +20,5 @@ dist
 .firebaserc
 .firebase
 src/constants
+.firebase
+.vscode

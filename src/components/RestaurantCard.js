@@ -1,4 +1,4 @@
-import { restaurantList, imgUrl } from "../config";
+import { restaurantList, imgUrl } from "../constants/config";
 import StarRating from "./StarRating";
 import { useContext } from "react";
 import userContext from "../hooks/userContext";

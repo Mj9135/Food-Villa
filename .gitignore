@@ -20,3 +20,4 @@ dist
 .firebaserc
 .firebase
 src/constants/api.js
+src/api.js

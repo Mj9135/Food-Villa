@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Fetch_Menu_Url } from "../constants/api";
-import { Proxi_Url } from "../constants/api";
+import { Fetch_Menu_Url } from "../api";
+import { Proxi_Url } from "../api";
 
 const useRestroMenu = (resId) => {
   const [restro, setRestro] = useState(null);

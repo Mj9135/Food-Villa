@@ -4,9 +4,10 @@ import {
   decreaseQuantity,
   increaseQuantity,
   removeItem,
-} from "./utils/cartSlice.js";
+} from "../slices/cartSlice.js";
 import { imgUrl } from "../constants/config.js";
 import PropTypes from "prop-types";
+import noImage from "../assets/Designer.jpeg";
 
 function MenuItemsList({ data }) {
   const dispatch = useDispatch();
@@ -54,10 +55,15 @@ function MenuItemsList({ data }) {
           </div>
           <div className="w-2/5 flex flex-col items-center relative">
             <img
-              className="w-32 md:w-40 h-28  rounded-md shadow-lg"
-              src={imgUrl + item.card.info.imageId}
-              alt="Dish Image"
+              className="w-32 md:w-40 h-28 rounded-md shadow-lg"
+              src={
+                item?.card?.info?.imageId
+                  ? imgUrl + item.card.info.imageId
+                  : noImage
+              }
+              alt={item?.card?.info?.name || "Default Image"}
             />
+
             <div className="absolute bottom-[-10px] w-full mt-8  bg-white/20 ">
               {getItemQuanitity(item.card.info.id) > 0 ? (
                 <div className="flex justify-center items-center w-full mb-[-6px]  ">

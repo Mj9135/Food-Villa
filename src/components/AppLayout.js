@@ -2,9 +2,9 @@ import Head from "./Header";
 import Footer from "./Footer";
 import { Outlet } from "react-router-dom";
 import { useState } from "react";
-import UserContext from "./utils/userContext";
+import UserContext from "../hooks/userContext";
 import { Provider } from "react-redux";
-import store from "../components/utils/store";
+import store from "../hooks/store";
 
 const AppLayout = () => {
   const [user, setUser] = useState({

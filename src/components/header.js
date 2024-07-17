@@ -1,10 +1,10 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
-import userContext from "./utils/userContext";
+import userContext from "../hooks/userContext";
 import { useSelector } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-import useOnline from "./utils/useOnline";
+import useOnline from "../hooks/useOnline";
 import logo from "../assets/logo.png";
 const Header = () => {
   const [login, setLogin] = useState(false);

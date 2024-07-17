@@ -1,7 +1,7 @@
 import { restaurantList, imgUrl } from "../constants/config";
 import StarRating from "./StarRating";
 import { useContext } from "react";
-import userContext from "./utils/userContext";
+import userContext from "../hooks/userContext";
 const RestaurantCard = ({
   name,
   areaName,

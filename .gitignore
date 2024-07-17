@@ -19,4 +19,4 @@ sketch
 dist
 .firebaserc
 .firebase
-src/constants
+src/constants/

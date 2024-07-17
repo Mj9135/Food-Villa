@@ -6,7 +6,7 @@ Tatanagar Treats is a Jamshedpur-based food ordering website built using React a
 
 ### Video Demo
 
-Include a video walkthrough here to demonstrate the features of your application. You can upload it to YouTube and embed the link here.
+
 ![Video](src/assets/gif.gif)
 
 

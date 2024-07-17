@@ -8,8 +8,8 @@ import store from "../hooks/store";
 
 const AppLayout = () => {
   const [user, setUser] = useState({
-    name: "Robin Singh",
-    email: "44robin.rs@gmail.com",
+    name: "Mj Gupta",
+    email: "mjguptacse@gmail.com",
   });
 
   return (

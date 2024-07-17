@@ -12,8 +12,6 @@ const Header = () => {
   const cartItems = useSelector((store) => store.cart.items);
   const isOnline = useOnline();
 
-  const handleLogin = () => setLogin(!login);
-
   return (
     <header className="sticky top-0 bg-white z-10 shadow-md w-full">
       <div className="p-3 w-full m-0 md:m-auto md:w-4/5 flex justify-between items-center">

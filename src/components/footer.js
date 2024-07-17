@@ -13,7 +13,7 @@ const Footer = () => {
     <footer className="bg-gray-800 text-white py-8 px-4 mt-4">
       <div className="container mx-auto flex flex-col md:flex-row md:justify-between md:items-center">
         <div className="mb-4 md:mb-4">
-          <h1 className="text-2xl font-bold text-center md:text-left">
+          <h1 className="text-2xl font-bold  text-center md:text-left">
             Tatanagar Treats
           </h1>
           <p className="text-gray-400 text-center pt-4 md:mt-4">

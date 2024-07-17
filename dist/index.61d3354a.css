@@ -1402,12 +1402,12 @@ img, video {
     margin-bottom: 1.5rem;
   }
 
-  .md\:ml-4 {
-    margin-left: 1rem;
-  }
-
   .md\:ml-\[-100px\] {
     margin-left: -100px;
+  }
+
+  .md\:ml-\[14px\] {
+    margin-left: 14px;
   }
 
   .md\:mr-\[-102px\] {
@@ -1446,18 +1446,6 @@ img, video {
     margin-top: -10px;
   }
 
-  .md\:ml-5 {
-    margin-left: 1.25rem;
-  }
-
-  .md\:ml-3 {
-    margin-left: .75rem;
-  }
-
-  .md\:ml-\[14px\] {
-    margin-left: 14px;
-  }
-
   .md\:block {
     display: block;
   }
@@ -1482,12 +1470,12 @@ img, video {
     height: 120px;
   }
 
-  .md\:h-\[150px\] {
-    height: 150px;
-  }
-
   .md\:h-\[160px\] {
     height: 160px;
+  }
+
+  .md\:h-\[180px\] {
+    height: 180px;
   }
 
   .md\:h-\[400px\] {

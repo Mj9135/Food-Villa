@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Proxi_Url, Fetch_Card_URL } from "..//constants/api";
+import { Proxi_Url, Fetch_Card_URL } from "../api";
 
 const useRestaurent = () => {
   const [restaurants, setRestaurants] = useState([]);

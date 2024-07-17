@@ -5,7 +5,7 @@ import {
   increaseQuantity,
   removeItem,
 } from "../slices/cartSlice.js";
-import { imgUrl } from "../constants/config.js";
+import { imgUrl } from "../config.js";
 import PropTypes from "prop-types";
 import noImage from "../assets/Designer.jpeg";
 

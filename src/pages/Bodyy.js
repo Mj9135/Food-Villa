@@ -1,5 +1,5 @@
 import { useEffect, useState, useContext } from "react";
-import { restaurantList, imgUrl } from "../constants/config";
+
 import Shimmer from "../components/Shimmer";
 
 import "@fortawesome/fontawesome-free/css/all.min.css";

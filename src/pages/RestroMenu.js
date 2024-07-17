@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import { imgUrl } from "../constants/config";
+import { imgUrl } from "../config";
 import { ShimmerMenu } from "../components/Shimmer";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import { menuImg } from "../constants/config";
+import { menuImg } from "../config";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faIndianRupeeSign } from "@fortawesome/free-solid-svg-icons";
 import useRestroMenu from "../hooks/useRestroMenu";
